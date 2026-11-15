@@ -1,0 +1,110 @@
+/* Farmer app (/app) in the landing's dark look. Scoped to body.app-dark, set by KurApp while it is mounted,
+   so modals (portalled to <body>) follow the theme and the legacy pages keep their light design. */
+body.app-dark {
+  --canvas: #090B0D; --card: #12161A; --sand: #1A1F24; --fog: #161B20;
+  --ink: #FFFFFF; --text: rgba(255,255,255,.86); --muted: rgba(255,255,255,.62); --faint: rgba(255,255,255,.42);
+  --line: rgba(255,255,255,.1); --line-strong: rgba(255,255,255,.22);
+  --or: #F2561D; --or-hover: #FF6A33;
+  --g: #2BD49A; --o: #F5A524; --r: #FF5A5F;
+  --panel: rgba(255,255,255,.045); --panel-line: rgba(255,255,255,.09);
+  background: #090B0D; color: var(--text);
+}
+body.app-dark .app, body.app-dark .welcome-wrap {
+  background: radial-gradient(1200px 520px at 75% -10%, rgba(30,70,90,.35), transparent 70%), #090B0D;
+}
+
+/* panels */
+body.app-dark .app-card, body.app-dark .fs, body.app-dark .sheet, body.app-dark .hm, body.app-dark .modal {
+  background: var(--panel); box-shadow: inset 0 0 0 1px var(--panel-line); color: var(--text);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px)
+}
+body.app-dark .modal { background: #12161A; box-shadow: 0 40px 120px rgba(0,0,0,.6), inset 0 0 0 1px var(--panel-line) }
+body.app-dark .modal-bg { background: rgba(0,0,0,.6) }
+body.app-dark .fs { border-radius: 26px; padding: 22px 22px 20px; position: relative; overflow: hidden }
+body.app-dark .fs::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--c); opacity: .9 }
+body.app-dark .fs-g { --c: var(--g) } body.app-dark .fs-o { --c: var(--o) } body.app-dark .fs-r { --c: var(--r) }
+body.app-dark .sheet.fs-g { --c: var(--g) } body.app-dark .sheet.fs-o { --c: var(--o) } body.app-dark .sheet.fs-r { --c: var(--r) }
+body.app-dark .fs-sec, body.app-dark .pf-row + .pf-row, body.app-dark .k-q-item + .k-q-item { border-color: var(--panel-line) }
+body.app-dark .fs-status { font-family: "Unbounded", var(--display); font-weight: 500; font-size: 28px; letter-spacing: -.03em; color: #fff }
+body.app-dark .fs-status i { box-shadow: 0 0 0 6px color-mix(in srgb, var(--c) 22%, transparent), 0 0 24px var(--c) }
+body.app-dark .fs-status.sm { font-size: 18px }
+body.app-dark .fs-h { color: var(--or) }
+body.app-dark .fs-d { background: rgba(255,255,255,.05); color: var(--muted) }
+body.app-dark .fs-d b { box-shadow: 0 0 10px var(--c) }
+body.app-dark .fs-crop { background: rgba(255,255,255,.05); color: var(--text) }
+body.app-dark .fs-crop.ok { background: rgba(43,212,154,.12) } body.app-dark .fs-crop.bad { background: rgba(255,90,95,.12); color: #FF9A9C }
+body.app-dark .pf-row b.bad { color: #FF8C8F } body.app-dark .pf-row b.good { color: var(--g) }
+
+/* buttons, inputs, choices */
+body.app-dark .k-btn.ghost { background: rgba(255,255,255,.06); color: #fff; box-shadow: inset 0 0 0 1px var(--line-strong) }
+body.app-dark .k-btn.ghost:hover { background: rgba(255,255,255,.12) }
+body.app-dark .k-btn.dark { background: #fff; color: #000 } body.app-dark .k-btn.dark:hover { background: #E8E8E8 }
+body.app-dark .input { background: rgba(255,255,255,.05); color: #fff; border-color: var(--line) }
+body.app-dark .k-choices button { background: rgba(255,255,255,.07); color: var(--text) }
+body.app-dark .k-choices button.on { background: #fff; color: #000 }
+body.app-dark .k-yesno button.salty { background: rgba(255,90,95,.14); color: #FF9A9C }
+body.app-dark .k-yesno button.fresh { background: rgba(43,212,154,.14); color: #6FF0C3 }
+body.app-dark .k-bubble { background: rgba(255,255,255,.06); color: var(--text) }
+
+/* titles */
+body.app-dark .app-title { font-family: "Unbounded", var(--display); font-weight: 500; letter-spacing: -.04em; color: #fff; text-transform: uppercase }
+body.app-dark .app-h3 { color: var(--or); letter-spacing: .12em }
+body.app-dark .live { color: var(--g) } body.app-dark .live i { background: var(--g) }
+body.app-dark .live.sim-b { color: var(--or) }
+
+/* navigation: bottom tabs on phones, sidebar on desktop */
+body.app-dark .app-tabs { background: rgba(9,11,13,.88); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-color: var(--panel-line) }
+body.app-dark .app-tabs button { color: var(--faint) }
+body.app-dark .app-tabs button.on { color: #fff; background: rgba(255,255,255,.1) }
+body.app-dark .app-brand { color: #fff }
+
+/* simulation bar */
+body.app-dark .sim.on { background: linear-gradient(90deg, #1A0E09, #2A130B); box-shadow: inset 0 0 0 1px rgba(242,86,29,.35) }
+body.app-dark .sim-list { background: #12161A; box-shadow: 0 30px 80px rgba(0,0,0,.6), inset 0 0 0 1px var(--panel-line) }
+body.app-dark .sim-list button { background: rgba(255,255,255,.06); color: #fff }
+body.app-dark .toast { background: #12161A; box-shadow: 0 20px 60px rgba(0,0,0,.6), inset 0 0 0 1px var(--panel-line) }
+
+/* hero strip on the home screen: today's salt front over a NASA image */
+.ah { position: relative; overflow: hidden; border-radius: 26px; margin: 14px 0 6px; padding: 22px 22px 20px; color: #fff;
+  background: linear-gradient(90deg, rgba(6,8,10,.86) 0%, rgba(6,8,10,.55) 60%, rgba(6,8,10,.25) 100%), url('/img/land/delta.jpg') center 60% / cover;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.1) }
+.ah-k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .75; display: flex; align-items: center; gap: 8px }
+.ah-v { font-family: "Unbounded", "Manrope", sans-serif; font-weight: 500; letter-spacing: -.04em; font-size: clamp(34px, 5vw, 64px); line-height: 1; margin-top: 10px }
+.ah-v small { font-size: .38em; letter-spacing: 0; opacity: .8; margin-left: 6px }
+.ah-t { margin-top: 8px; font-size: 15px; opacity: .85; max-width: 520px }
+.ah-s { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px }
+.ah-s span { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.1); font-size: 12.5px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px) }
+
+/* profile: two columns on desktop */
+.pf-grid { display: block }
+
+@media (min-width: 960px) {
+  body.app-dark .app-tabs { background: #07090B; border-right: 1px solid var(--panel-line) }
+  body.app-dark .app-tabs button { border-radius: 14px }
+  body.app-dark .app-mon { background: #fff; color: #000 }
+  body.app-dark .app-title { font-size: 40px }
+  body.app-dark .app-card, body.app-dark .k-bubble, body.app-dark .sheet { max-width: none }
+  body.app-dark .welcome-wrap .app { background: transparent }
+  body.app-dark .welcome-art { background: linear-gradient(180deg, rgba(6,8,10,.05), rgba(6,8,10,.8)), url('/img/land/caspian.jpg') center / cover }
+  body.app-dark .welcome-art h2 { font-family: "Unbounded", var(--display); font-weight: 500; text-transform: uppercase; font-size: 58px }
+  body.app-dark .app-welcome h1 { font-family: "Unbounded", var(--display); font-weight: 500; text-transform: uppercase; letter-spacing: -.04em }
+  .pf-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 24px; align-items: start; max-width: 1180px }
+  .ah { padding: 30px 32px 26px; margin-top: 18px }
+}
+
+/* map chrome in the dark theme (tooltips and zoom buttons inherit white ink otherwise) */
+body.app-dark .leaflet-tooltip { background: #12161A; color: #fff; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 8px 24px rgba(0,0,0,.5) }
+body.app-dark .leaflet-tooltip-top:before { border-top-color: #12161A }
+body.app-dark .leaflet-tooltip-bottom:before { border-bottom-color: #12161A }
+body.app-dark .leaflet-bar a { background: #12161A; color: #fff; border-color: rgba(255,255,255,.14) }
+body.app-dark .leaflet-bar a:hover { background: #1E242A }
+body.app-dark .leaflet-control-attribution { background: rgba(9,11,13,.7); color: rgba(255,255,255,.6) }
+body.app-dark .leaflet-control-attribution a { color: rgba(255,255,255,.8) }
+
+.fs-where { display: flex; align-items: center; gap: 6px }
+.fs-where svg, .pf-farm svg { color: var(--or); flex: none }
+.pf-farm { display: inline-flex; align-items: center; gap: 6px }
+.toast b { display: flex; align-items: center; gap: 5px }
+.sim-pp { display: grid; place-items: center }
+.app-logo-wrap { display: flex; justify-content: center }
+.app-logo-wrap .fs-logo { filter: drop-shadow(0 12px 30px rgba(242,86,29,.35)) }

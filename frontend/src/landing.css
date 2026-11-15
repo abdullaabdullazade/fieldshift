@@ -1,0 +1,154 @@
+/* Cinematic story landing (pages/Landing.jsx). Dark, full screen, one scene at a time. */
+.land {
+  --ink: #fff; --muted: rgba(255,255,255,.72); --line: rgba(255,255,255,.42); --accent: #F2561D;
+  position: fixed; inset: 0; overflow: hidden; background: #090807; color: var(--ink);
+  font-family: "Manrope", "Inter", system-ui, sans-serif; font-synthesis: none; user-select: none;
+}
+.land a { color: inherit; text-decoration: none }
+.land button { font: inherit; color: inherit; cursor: pointer }
+
+/* backgrounds */
+.land-bgs, .land-bg, .land-shade { position: absolute; inset: 0; width: 100%; height: 100% }
+.land-bg { object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity 1s ease, transform 7s ease-out }
+.land-bg.on { opacity: 1; transform: scale(1) }
+.land-bg.void { background: radial-gradient(120% 90% at 70% 20%, #1b2a33 0%, #0b0f12 55%, #060606 100%) }
+.land-shade { z-index: 1; pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,.45) 0%, transparent 22%, transparent 46%, rgba(0,0,0,.9) 100%) }
+
+/* chrome fades while a scene flies in */
+.land-chrome { position: absolute; z-index: 4; transition: opacity .45s ease, filter .45s ease }
+.land.is-flying .land-chrome:not(.land-head):not(.land-list) { opacity: 0; filter: blur(8px); pointer-events: none }
+
+/* expanding card → next scene */
+.land-fly { position: absolute; inset: 0; z-index: 3; background: #0b0f12 center / cover no-repeat;
+  clip-path: inset(var(--t) var(--r) var(--b) var(--l) round 90px);
+  transition: clip-path 1.1s cubic-bezier(.76,0,.24,1) }
+.land-fly.go { clip-path: inset(0 0 0 0 round 0) }
+
+/* preloader */
+.land-pre { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; align-content: center; gap: 18px;
+  background: #000; transition: opacity .9s ease .2s, visibility 0s 1.1s }
+.land-pre.done { opacity: 0; visibility: hidden }
+.land-count { font-size: clamp(48px, 7vw, 96px); font-weight: 200; letter-spacing: -.04em; line-height: 1 }
+.land-count small { font-size: .35em; margin-left: 4px; opacity: .6 }
+.land-pre-t { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; opacity: .6 }
+.land-logo { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: #fff; flex: none }
+.land-logo.big { width: 64px; height: 64px; border-radius: 18px }
+
+/* header */
+.land-head { left: clamp(18px, 2vw, 28px); right: clamp(18px, 2vw, 28px); top: clamp(16px, 3vh, 28px);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px }
+.land-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; letter-spacing: -.01em }
+.land-actions { display: flex; align-items: center; gap: 8px }
+.land-nav { display: flex; align-items: center; height: 42px; padding: 4px 5px; border: 1px solid var(--line);
+  background: rgba(255,255,255,.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-radius: 999px }
+.land-nav a { padding: 8px 18px; border-radius: 999px; line-height: 1; font-size: 15px }
+.land-nav a.on { background: #fff; color: #000 }
+.land-lang { height: 42px; min-width: 42px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line);
+  background: rgba(255,255,255,.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); font-weight: 600 }
+.land-cta { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 20px; border-radius: 999px; background: #fff; color: #000 !important; font-weight: 600 }
+.land-cta.big { height: 54px; padding: 0 28px; font-size: 17px; background: var(--accent); color: #fff !important }
+
+/* scene list */
+.land-list { left: clamp(18px, 2vw, 28px); top: clamp(90px, 15vh, 140px); display: flex; flex-direction: column; gap: 6px; align-items: flex-start }
+.land-list button { background: none; border: 0; padding: 2px 0; font-size: 15px; opacity: .62; display: flex; align-items: center; gap: 8px; transition: opacity .2s, font-size .3s }
+.land-list button:hover { opacity: 1 }
+.land-list button.on { opacity: 1; font-size: 17px; font-weight: 700 }
+.land-list button.on::before { content: ''; width: 14px; height: 14px; border-radius: 50%; background: #fff }
+
+/* next card */
+.land-portal-wrap { left: 50%; top: 50%; width: min(300px, 26vw); transform: translate(-50%, -56%); animation: land-in .8s ease .35s both }
+.land-portal-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; font-size: 15px }
+.land-portal-head b { font-size: 17px; margin-left: 6px }
+.land-portal { display: grid; place-items: center; width: 100%; aspect-ratio: 320 / 350; border: 0; border-radius: 90px;
+  background: #0f1519 center / cover no-repeat; box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.18);
+  transition: transform .25s ease-out, box-shadow .3s; will-change: transform }
+.land-portal:hover { box-shadow: 0 34px 90px rgba(0,0,0,.65), inset 0 0 0 2px rgba(255,255,255,.5) }
+.land-portal:focus-visible { outline: 2px solid #fff; outline-offset: 8px }
+.land-portal-chart { font-size: clamp(26px, 2.6vw, 40px); font-weight: 200; letter-spacing: -.03em }
+.land-hint { margin-top: 14px; text-align: center; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .55 }
+
+/* bottom content */
+.land-content { left: clamp(24px, 4vw, 58px); right: clamp(24px, 3vw, 44px); bottom: clamp(26px, 4vh, 40px);
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 40px }
+.land-left { min-width: 0; flex: 1; overflow: hidden }
+.land-kicker { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; animation: land-in .7s ease .1s both }
+.land-lead { max-width: 560px; margin: 10px 0 14px; font-size: clamp(16px, 1.35vw, 21px); line-height: 1.4; color: #fff; animation: land-in .7s ease .2s both }
+.land-title { margin: 0; font-family: "Unbounded", "Manrope", sans-serif; font-weight: 500; line-height: .82; letter-spacing: -.045em;
+  text-transform: uppercase; white-space: nowrap; animation: land-title 1s cubic-bezier(.16,1,.3,1) .05s both }
+.land-facts { width: min(450px, 34vw); margin: 0; font-size: 15px; flex: none }
+.land-fact { display: grid; grid-template-columns: 128px 1fr; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); animation: land-in .6s ease both }
+.land-fact:last-child { border-bottom: 0 }
+.land-fact dt { font-weight: 700 }
+.land-fact dd { margin: 0; color: rgba(255,255,255,.88); line-height: 1.4 }
+
+.land-credit { right: clamp(24px, 3vw, 44px); top: clamp(76px, 11vh, 100px); font-size: 11px; letter-spacing: .06em; opacity: .55; max-width: 360px; text-align: right }
+.land-progress { right: clamp(24px, 3vw, 44px); top: 50%; transform: translateY(-50%); font-size: 13px; opacity: .7; writing-mode: vertical-rl }
+.land-progress b { font-size: 15px }
+
+/* data panels */
+.land-chart { right: clamp(56px, 4vw, 70px); top: clamp(120px, 16vh, 150px); width: min(470px, calc(50vw - 230px)); animation: land-in .8s ease .3s both }
+.land-fig { margin: 0; padding: 18px 20px 12px; border-radius: 22px; background: rgba(8,10,12,.55); border: 1px solid rgba(255,255,255,.14);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px) }
+.land-fig figcaption { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin-bottom: 6px }
+.land-fig svg { width: 100%; height: auto; display: block; overflow: visible }
+.land-fig .ax { stroke: rgba(255,255,255,.28); stroke-width: 1 }
+.land-fig .ax.dash { stroke-dasharray: 4 6 }
+.land-fig .ln { fill: none; stroke: #5EC8E5; stroke-width: 3; stroke-linejoin: round; stroke-dasharray: 4000; animation: land-draw 2.4s ease .4s both }
+.land-fig .ln.thin { stroke-width: 1.6; stroke: #F28B5B }
+.land-fig .area { fill: rgba(94,200,229,.14); stroke: none }
+.land-fig .lb { fill: rgba(255,255,255,.7); font-size: 18px }
+.land-fig .lb.hl { fill: #fff; font-weight: 700 }
+.land-fig .big { fill: #fff; font-size: 44px; font-weight: 300; letter-spacing: -.03em }
+.land-fig .dot { fill: #fff; stroke: var(--accent); stroke-width: 4 }
+
+.land-live { right: clamp(56px, 4vw, 70px); top: clamp(120px, 16vh, 150px); width: min(420px, calc(50vw - 230px)); text-align: left; padding: 16px 26px; border-radius: 24px;
+  background: rgba(8,10,12,.6); border: 1px solid rgba(255,255,255,.16); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); animation: land-in .8s ease .3s both }
+.land-live-k { font-size: 11px; letter-spacing: .14em; display: flex; align-items: center; justify-content: flex-start; gap: 8px; opacity: .8 }
+.land-live-k i { width: 8px; height: 8px; border-radius: 50%; background: #2BD49A; box-shadow: 0 0 0 0 rgba(43,212,154,.6); animation: land-pulse 1.6s infinite }
+.land-live-v { font-size: clamp(16px, 1.5vw, 22px); margin-top: 6px }
+.land-live-v b { font-size: 1.6em; font-weight: 600; color: #2BD49A }
+.land-live-s { font-size: 13px; opacity: .7; margin-top: 4px }
+.land.is-flying .land-live, .land.is-flying .land-chart { opacity: 0 }
+
+.land-end { left: 50%; top: 50%; transform: translate(-50%, -60%); display: flex; flex-direction: column; align-items: center; gap: 12px; animation: land-in .8s ease .3s both }
+.land-ghost { height: 46px; padding: 0 22px; display: inline-flex; align-items: center; border-radius: 999px; border: 1px solid var(--line);
+  background: rgba(255,255,255,.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); font-weight: 600 }
+
+@keyframes land-in { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+.land-portal-wrap, .land-end { animation-name: land-in-c }
+@keyframes land-in-c { from { opacity: 0; translate: 0 14px } to { opacity: 1; translate: 0 0 } }
+@keyframes land-title { from { opacity: 0; transform: translateX(-40px) } to { opacity: 1; transform: none } }
+@keyframes land-draw { from { stroke-dashoffset: 4000 } to { stroke-dashoffset: 0 } }
+@keyframes land-pulse { 70% { box-shadow: 0 0 0 10px rgba(43,212,154,0) } 100% { box-shadow: 0 0 0 0 rgba(43,212,154,0) } }
+
+/* tablets and phones */
+@media (max-height: 760px) and (min-width: 761px) { .land-list { display: none } }
+@media (max-width: 1100px) and (min-width: 761px) {
+  .land-list { display: none }
+  .land-portal-wrap { width: 200px; left: 40px; transform: none; top: 110px }
+  .land-chart, .land-live { width: min(470px, calc(100vw - 320px)) }
+}
+@media (max-width: 760px) {
+  .land-nav, .land-list, .land-progress, .land-hint { display: none }
+  .land-cta { height: 38px; padding: 0 14px; font-size: 14px }
+  .land-lang { height: 38px }
+  .land-content { flex-direction: column; align-items: stretch; gap: 14px; left: 16px; right: 16px; bottom: 18px }
+  .land-facts { width: 100%; font-size: 13.5px }
+  .land-fact { grid-template-columns: 96px 1fr; gap: 10px; padding: 6px 0 }
+  .land-lead { font-size: 15px; margin: 6px 0 14px }
+  .land-title { line-height: .9 }
+  .land-shade { background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, transparent 20%, transparent 34%, rgba(0,0,0,.92) 62%, rgba(0,0,0,.95) 100%) }
+  .land-portal-wrap { left: auto; right: 16px; top: 74px; bottom: auto; transform: none; width: 112px }
+  .land-portal { border-radius: 34px }
+  .land-portal-head { font-size: 11px; margin-bottom: 6px; flex-direction: column; gap: 2px }
+  .land-portal-head b { font-size: 13px; margin: 0 }
+  .land-credit { top: 64px; left: 16px; right: auto; text-align: left; font-size: 9.5px; max-width: calc(100vw - 150px) }
+  .land-chart { top: 96px; width: calc(100vw - 150px); left: 16px; right: auto }
+  .land-fig { padding: 10px 12px 6px; border-radius: 16px }
+  .land-live { top: 96px; left: 16px; right: auto; width: calc(100vw - 150px); padding: 12px 14px }
+  .land-end { top: 38%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .land *, .land-fly { animation: none !important; transition: none !important }
+}
