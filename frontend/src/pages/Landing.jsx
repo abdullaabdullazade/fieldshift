@@ -103,10 +103,10 @@ const SCENES = [
 const UI = {
   az: { next: 'Növbəti', story: 'Hekayə', monitor: 'Monitor', app: 'Tətbiq', open: 'Tətbiqə keç', live: 'CANLI', today: 'Bu gün Xəzərin suyu Kürə', km: 'km girib',
     flow: 'Kürün axını', wind: 'Dəniz küləyi', demo: 'Demo fermer kimi bax', monitorBtn: 'Canlı monitor', scroll: 'Sürüşdür və ya kartı bas', loading: 'Peyk datası yüklənir',
-    g_title: 'Su ehtiyatı, sm (GRACE)', b_title: 'Duzlu suyun Kürə girdiyi məsafə, km (hər gün)', b_press: 'mətbuat ~30 km', b_swot: 'SWOT: çay düzdür', startOver: 'Əvvələ qayıt', cm: 'sm' },
+    g_title: 'Su ehtiyatı, sm (GRACE)', b_title: 'Duzlu suyun Kürə girdiyi məsafə, km (hər gün)', b_press: 'mətbuat ~30 km', b_swot: 'SWOT: çay düzdür', startOver: 'Əvvələ qayıt', cm: 'sm', enter: 'Keç' },
   en: { next: 'Next', story: 'Story', monitor: 'Monitor', app: 'App', open: 'Open the app', live: 'LIVE', today: 'Today Caspian water reaches', km: 'km up the Kür',
     flow: 'Kür flow', wind: 'Sea wind', demo: 'Look around as a demo farmer', monitorBtn: 'Live monitor', scroll: 'Scroll or tap the card', loading: 'Loading satellite data',
-    g_title: 'Water storage, cm (GRACE)', b_title: 'How far salt water entered the Kür, km (every day)', b_press: 'press ~30 km', b_swot: 'SWOT: flat river', startOver: 'Back to start', cm: 'cm' },
+    g_title: 'Water storage, cm (GRACE)', b_title: 'How far salt water entered the Kür, km (every day)', b_press: 'press ~30 km', b_swot: 'SWOT: flat river', startOver: 'Back to start', cm: 'cm', enter: 'Enter' },
 }
 
 const bg = (s) => (s.img ? `${IMG}${s.img}.jpg` : null)
@@ -119,6 +119,11 @@ export default function Landing() {
   const [idx, setIdx] = useState(0)
   const [fly, setFly] = useState(null)          // {to, from: rect, go: bool}
   const [ready, setReady] = useState(0)          // preload progress 0..100
+  const seen = (() => { try { return sessionStorage.getItem('fs_intro') === '1' } catch { return false } })()
+  const [intro, setIntro] = useState({ pct: 0, done: seen, docked: seen })   // NASA zoom intro (Europe → Caspian)
+  const introRef = useRef(null)
+  const cursor = useRef(null)
+  const [enter, setEnter] = useState(false)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
   const [live, setLive] = useState(null)
   const [grace, setGrace] = useState(null)
@@ -138,13 +143,27 @@ export default function Landing() {
     api('/kur/daily?start=2020-01-01').then(setDaily).catch(() => {})
   }, [])
 
+  useEffect(() => {
+    if (intro.done || ready < 100 || intro.pct < 100) return
+    setIntro((x) => ({ ...x, done: true }))
+    try { sessionStorage.setItem('fs_intro', '1') } catch { /* private mode */ }
+    setTimeout(() => setIntro((x) => ({ ...x, docked: true })), 350)
+  }, [ready, intro.pct, intro.done])
+  useEffect(() => {   // never hang on the intro (autoplay blocked, slow network)
+    const id = setTimeout(() => setIntro((x) => ({ ...x, pct: 100 })), 11000)
+    return () => clearTimeout(id)
+  }, [])
+  const count = intro.done ? 100 : Math.min(ready, intro.pct)
+
   const go = (to) => {
     if (fly || to === idx) return
+    setEnter(false)
     const r = portal.current?.getBoundingClientRect()
     const from = r && r.width ? r : { left: innerWidth / 2 - 80, top: innerHeight / 2 - 90, width: 160, height: 180 }
-    setFly({ to, from, go: false })
+    const dive = idx === 0 && to === 1
+    setFly({ to, from, go: false, dive })
     requestAnimationFrame(() => requestAnimationFrame(() => setFly((f) => f && { ...f, go: true })))
-    setTimeout(() => { setIdx(to); setFly(null) }, 1150)
+    setTimeout(() => { setIdx(to); setFly(null) }, dive ? 3300 : 1150)
   }
   const step = (d) => go((idx + d + SCENES.length) % SCENES.length)
 
@@ -157,6 +176,7 @@ export default function Landing() {
   })
 
   const move = (e) => {
+    if (cursor.current) cursor.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
     const r = portal.current?.getBoundingClientRect()
     if (!r) return
     setTilt({ x: ((e.clientY - (r.top + r.height / 2)) / innerHeight) * -14, y: ((e.clientX - (r.left + r.width / 2)) / innerWidth) * 18 })
@@ -180,7 +200,7 @@ export default function Landing() {
   const flyTo = fly ? SCENES[fly.to] : null
 
   return (
-    <main className={`land ${fly ? 'is-flying' : ''} ${ready >= 100 ? 'is-ready' : ''}`} onMouseMove={move}
+    <main className={`land ${fly ? 'is-flying' : ''} ${intro.done ? 'is-ready' : 'is-intro'}`} onMouseMove={move}
       onTouchStart={(e) => { touch.current = e.touches[0].clientY }} onTouchEnd={(e) => {
         const d = touch.current - e.changedTouches[0].clientY; if (Math.abs(d) > 50) step(d > 0 ? 1 : -1)
       }}>
@@ -193,16 +213,22 @@ export default function Landing() {
 
       {flyTo && <div className={`land-fly ${fly.go ? 'go' : ''}`} style={{
         '--t': `${fly.from.top}px`, '--l': `${fly.from.left}px`, '--r': `${innerWidth - fly.from.left - fly.from.width}px`, '--b': `${innerHeight - fly.from.top - fly.from.height}px`,
-        backgroundImage: flyTo.img ? `url(${bg(flyTo)})` : 'none' }} />}
+        backgroundImage: flyTo.img && !fly.dive ? `url(${bg(flyTo)})` : 'none' }}>
+        {fly.dive && <video className="land-fly-video" src="/video/dive.mp4" muted playsInline autoPlay preload="auto" poster={bg(flyTo)} />}
+      </div>}
 
-      <div className={`land-pre ${ready >= 100 ? 'done' : ''}`} aria-hidden={ready >= 100}>
-        <Logo s={68} />
-        <div className="land-count">{ready}<small>%</small></div>
-        <div className="land-pre-t">{u.loading}</div>
-      </div>
+      {!seen && <div className={`land-pre ${intro.done ? 'done' : ''}`} aria-hidden={intro.done}>
+        <video ref={introRef} className="land-pre-video" src="/video/intro.mp4" muted playsInline autoPlay preload="auto"
+          onTimeUpdate={(e) => { const v = e.currentTarget; if (v.duration) setIntro((x) => ({ ...x, pct: Math.max(x.pct, Math.round(v.currentTime / v.duration * 100)) })) }}
+          onEnded={() => setIntro((x) => ({ ...x, pct: 100 }))} onError={() => setIntro((x) => ({ ...x, pct: 100 }))} />
+        <div className="land-pre-shade" />
+      </div>}
+      {!seen && <div className={`land-count ${intro.done ? 'is-leaving' : ''}`} aria-live="polite">{count}<small>%</small></div>}
+      <div className={`land-flogo ${intro.docked ? 'docked' : ''}`} aria-hidden="true"><Logo s={64} /></div>
+      <div ref={cursor} className={`land-cursor ${enter ? 'is-enter' : ''}`} aria-hidden="true"><i className="o" /><i className="d" /><span>{u.enter}</span></div>
 
       <header className="land-head land-chrome">
-        <Link to="/" className="land-brand"><Logo s={36} />Field Shift</Link>
+        <Link to="/" className="land-brand"><span className="land-brand-slot" />Field Shift</Link>
         <div className="land-actions">
           <nav className="land-nav">
             <a className="on" href="#story">{u.story}</a><Link to="/monitor">{u.monitor}</Link><Link to="/app">{u.app}</Link>
@@ -229,6 +255,7 @@ export default function Landing() {
       {!s.end && <section className="land-portal-wrap land-chrome" aria-label={u.next}>
         <div className="land-portal-head"><span>{u.next}:</span><span>{num(nextI)} <b>{nx.title[lang]}</b></span></div>
         <button ref={portal} className="land-portal" onClick={() => go(nextI)} aria-label={`${u.next}: ${nx.title[lang]}`}
+          onMouseEnter={() => setEnter(true)} onMouseLeave={() => setEnter(false)}
           style={{ transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`, backgroundImage: nx.img ? `url(${thumb(nx)})` : 'none' }}>
           {!nx.img && <span className="land-portal-chart">{nx.chart === 'grace' ? `−22.5 ${u.cm}` : '2,506'}</span>}
         </button>
