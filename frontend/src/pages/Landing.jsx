@@ -13,7 +13,7 @@ const SCENES = [
   {
     id: 'xezer', img: 'caspian', credit: { az: 'NASA Terra MODIS · Xəzər dənizi · 3 sentyabr 2025', en: 'NASA Terra MODIS · Caspian Sea · 3 September 2025' },
     title: { az: 'Xəzər', en: 'Caspian' }, kicker: { az: 'Problem', en: 'The problem' },
-    lead: { az: 'Dəniz suyu çaya geri girir. Fermer bunu görmür.', en: 'Sea water is flowing back into the river. Farmers cannot see it.' },
+    lead: { az: 'Xəzərin suyu Kürə girir. Fermer bunu görmür.', en: 'Caspian water flows into the Kür. Farmers cannot see it.' },
     facts: {
       az: [['Duz', 'Xəzər suyunun hər litrində 12–13 qram duz var.'], ['Bitki üçün', 'Suvarma üçün yararlı həddən 7 dəfə duzludur (~20 dS/m, FAO həddi 3).'],
         ['Gizlidir', 'Duzlu su ağırdır və çayın dibi ilə gedir. Üstdən su şirin görünür.'], ['Nəticə', 'Bir dəfə duzlu su ilə suvarılan sahədə məhsul yanır, torpaq illərlə duzlu qalır.']],
@@ -24,7 +24,7 @@ const SCENES = [
   {
     id: 'kur', img: 'delta', credit: { az: 'NASA Terra MODIS · Kür deltası · 3 sentyabr 2025', en: 'NASA Terra MODIS · Kür delta · 3 September 2025' },
     title: { az: 'Kür', en: 'Kür' }, kicker: { az: 'Çay zəifləyir', en: 'A weakening river' },
-    lead: { az: 'Kür güclü olanda dənizi geri itələyir. Zəifləyəndə dəniz içəri girir.', en: 'A strong Kür holds the sea back. A weak one lets it in.' },
+    lead: { az: 'Kür güclü olanda Xəzərin suyunu geri itələyir. Zəif olanda isə Xəzərin suyu Kürə axır.', en: 'A strong Kür pushes the Caspian back. When it is weak, Caspian water flows into the Kür.' },
     facts: {
       az: [['Su ehtiyatı', 'Azərbaycanın su ehtiyatı son 4 quraq ildə 25%-dən çox azalıb.'], ['Axın', 'Kürün ağzında orta axın saniyədə 334 m³-dir. Bundan aşağı düşəndə risk başlayır.'],
         ['Ərazi', 'Kürün son 160 km-i: Neftçala və Salyanda 45 kənd.'], ['2 gün əvvəl', 'Yuxarıda azalan su dənizə 2 günə çatır. Biz bunu əvvəlcədən görürük.']],
