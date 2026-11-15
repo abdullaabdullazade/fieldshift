@@ -1,0 +1,26 @@
+# dependencies and builds
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+
+# secrets and server details (never commit)
+backend/.env
+deploy.env
+data/.access
+data/.jwt_secret
+
+# databases (contain user accounts) and large / regenerable data
+data/*.db*
+data/raw/
+data/cache/
+data/geo/
+data/sat/
+data/kur/state.json
+data/kur/swot_live.json
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
