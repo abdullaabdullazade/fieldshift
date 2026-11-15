@@ -1,0 +1,722 @@
+{
+ "naxcivan-sheher": {
+  "phh2o": 7.86,
+  "clay": 28.05,
+  "sand": 34.04,
+  "silt": 37.94,
+  "soc": 12.01,
+  "nitrogen": 1.35,
+  "cec": 18.44,
+  "texture": "Clay loam"
+ },
+ "babek": {
+  "phh2o": 7.78,
+  "clay": 28.62,
+  "sand": 31.46,
+  "silt": 39.96,
+  "soc": 12.14,
+  "nitrogen": 1.41,
+  "cec": 19.54,
+  "texture": "Clay loam"
+ },
+ "culfa": {
+  "phh2o": 7.62,
+  "clay": 30.74,
+  "sand": 30.39,
+  "silt": 38.91,
+  "soc": 17.37,
+  "nitrogen": 1.8,
+  "cec": 21.21,
+  "texture": "Clay loam"
+ },
+ "kengerli": {
+  "phh2o": 7.63,
+  "clay": 27.94,
+  "sand": 31.85,
+  "silt": 40.25,
+  "soc": 14.98,
+  "nitrogen": 1.64,
+  "cec": 20.05,
+  "texture": "Clay loam"
+ },
+ "ordubad": {
+  "phh2o": 7.45,
+  "clay": 29.71,
+  "sand": 31.39,
+  "silt": 38.94,
+  "soc": 22.18,
+  "nitrogen": 2.13,
+  "cec": 21.64,
+  "texture": "Clay loam"
+ },
+ "sederek": {
+  "phh2o": 7.81,
+  "clay": 28.46,
+  "sand": 30.6,
+  "silt": 40.98,
+  "soc": 12.13,
+  "nitrogen": 1.27,
+  "cec": 18.79,
+  "texture": "Clay loam"
+ },
+ "sahbuz": {
+  "phh2o": 7.24,
+  "clay": 30.98,
+  "sand": 29.46,
+  "silt": 39.6,
+  "soc": 26.07,
+  "nitrogen": 2.45,
+  "cec": 23.49,
+  "texture": "Clay loam"
+ },
+ "serur": {
+  "phh2o": 7.74,
+  "clay": 27.68,
+  "sand": 31.16,
+  "silt": 41.19,
+  "soc": 14.33,
+  "nitrogen": 1.49,
+  "cec": 19.54,
+  "texture": "Clay loam"
+ },
+ "abseron": {
+  "phh2o": 7.55,
+  "clay": 37.29,
+  "sand": 17.03,
+  "silt": 45.71,
+  "soc": 16.66,
+  "nitrogen": 1.69,
+  "cec": 23.21,
+  "texture": "Clay loam"
+ },
+ "xizi": {
+  "phh2o": 7.28,
+  "clay": 35.73,
+  "sand": 20.0,
+  "silt": 44.3,
+  "soc": 21.39,
+  "nitrogen": 2.14,
+  "cec": 24.69,
+  "texture": "Clay loam"
+ },
+ "agsu": {
+  "phh2o": 7.3,
+  "clay": 38.47,
+  "sand": 17.15,
+  "silt": 44.42,
+  "soc": 20.34,
+  "nitrogen": 2.27,
+  "cec": 23.95,
+  "texture": "Clay loam"
+ },
+ "ismayilli": {
+  "phh2o": 6.62,
+  "clay": 32.22,
+  "sand": 27.97,
+  "silt": 39.84,
+  "soc": 30.01,
+  "nitrogen": 2.69,
+  "cec": 24.03,
+  "texture": "Clay loam"
+ },
+ "qobustan": {
+  "phh2o": 7.23,
+  "clay": 37.99,
+  "sand": 18.36,
+  "silt": 43.69,
+  "soc": 22.6,
+  "nitrogen": 2.23,
+  "cec": 24.6,
+  "texture": "Clay loam"
+ },
+ "samaxi": {
+  "phh2o": 6.94,
+  "clay": 32.62,
+  "sand": 26.26,
+  "silt": 41.16,
+  "soc": 26.91,
+  "nitrogen": 2.5,
+  "cec": 24.68,
+  "texture": "Clay loam"
+ },
+ "gence-sheher": {
+  "phh2o": 7.43,
+  "clay": 32.93,
+  "sand": 21.37,
+  "silt": 45.74,
+  "soc": 16.49,
+  "nitrogen": 1.7,
+  "cec": 22.94,
+  "texture": "Clay loam"
+ },
+ "naftalan-sheher": {
+  "phh2o": 7.27,
+  "clay": 35.56,
+  "sand": 19.6,
+  "silt": 44.88,
+  "soc": 18.82,
+  "nitrogen": 1.97,
+  "cec": 24.14,
+  "texture": "Clay loam"
+ },
+ "daskesen": {
+  "phh2o": 6.58,
+  "clay": 31.51,
+  "sand": 30.15,
+  "silt": 38.38,
+  "soc": 36.05,
+  "nitrogen": 2.9,
+  "cec": 21.94,
+  "texture": "Clay loam"
+ },
+ "goranboy": {
+  "phh2o": 7.21,
+  "clay": 31.64,
+  "sand": 22.45,
+  "silt": 45.94,
+  "soc": 22.72,
+  "nitrogen": 2.07,
+  "cec": 22.47,
+  "texture": "Clay loam"
+ },
+ "goygol": {
+  "phh2o": 6.89,
+  "clay": 32.87,
+  "sand": 24.78,
+  "silt": 42.38,
+  "soc": 26.99,
+  "nitrogen": 2.37,
+  "cec": 22.64,
+  "texture": "Clay loam"
+ },
+ "samux": {
+  "phh2o": 7.44,
+  "clay": 32.15,
+  "sand": 22.18,
+  "silt": 45.71,
+  "soc": 18.07,
+  "nitrogen": 1.8,
+  "cec": 22.95,
+  "texture": "Clay loam"
+ },
+ "xankendi-sheher": {
+  "phh2o": 6.94,
+  "clay": 32.65,
+  "sand": 27.42,
+  "silt": 39.96,
+  "soc": 20.63,
+  "nitrogen": 2.22,
+  "cec": 20.61,
+  "texture": "Clay loam"
+ },
+ "agcabedi": {
+  "phh2o": 7.66,
+  "clay": 35.12,
+  "sand": 16.31,
+  "silt": 48.61,
+  "soc": 17.81,
+  "nitrogen": 1.86,
+  "cec": 23.4,
+  "texture": "Clay loam"
+ },
+ "agdam": {
+  "phh2o": 7.29,
+  "clay": 33.8,
+  "sand": 19.16,
+  "silt": 47.08,
+  "soc": 17.94,
+  "nitrogen": 1.93,
+  "cec": 22.89,
+  "texture": "Clay loam"
+ },
+ "agdere": {
+  "phh2o": 7.07,
+  "clay": 35.62,
+  "sand": 20.1,
+  "silt": 44.32,
+  "soc": 21.2,
+  "nitrogen": 2.3,
+  "cec": 23.29,
+  "texture": "Clay loam"
+ },
+ "berde": {
+  "phh2o": 7.73,
+  "clay": 34.68,
+  "sand": 17.68,
+  "silt": 47.68,
+  "soc": 16.04,
+  "nitrogen": 1.79,
+  "cec": 21.32,
+  "texture": "Clay loam"
+ },
+ "fuzuli": {
+  "phh2o": 7.31,
+  "clay": 39.97,
+  "sand": 14.02,
+  "silt": 46.05,
+  "soc": 16.51,
+  "nitrogen": 1.81,
+  "cec": 24.3,
+  "texture": "Clay loam"
+ },
+ "xocali": {
+  "phh2o": 6.6,
+  "clay": 32.95,
+  "sand": 25.91,
+  "silt": 41.17,
+  "soc": 29.71,
+  "nitrogen": 2.64,
+  "cec": 21.66,
+  "texture": "Clay loam"
+ },
+ "xocavend": {
+  "phh2o": 6.89,
+  "clay": 34.32,
+  "sand": 22.52,
+  "silt": 43.21,
+  "soc": 25.39,
+  "nitrogen": 2.33,
+  "cec": 22.97,
+  "texture": "Clay loam"
+ },
+ "susa": {
+  "phh2o": 6.42,
+  "clay": 33.0,
+  "sand": 26.21,
+  "silt": 40.83,
+  "soc": 36.37,
+  "nitrogen": 2.94,
+  "cec": 22.28,
+  "texture": "Clay loam"
+ },
+ "terter": {
+  "phh2o": 7.05,
+  "clay": 33.69,
+  "sand": 21.32,
+  "silt": 45.03,
+  "soc": 23.21,
+  "nitrogen": 2.27,
+  "cec": 22.57,
+  "texture": "Clay loam"
+ },
+ "agstafa": {
+  "phh2o": 7.15,
+  "clay": 33.92,
+  "sand": 22.05,
+  "silt": 44.07,
+  "soc": 19.7,
+  "nitrogen": 1.91,
+  "cec": 23.88,
+  "texture": "Clay loam"
+ },
+ "gedebey": {
+  "phh2o": 6.64,
+  "clay": 31.42,
+  "sand": 30.41,
+  "silt": 38.21,
+  "soc": 34.36,
+  "nitrogen": 2.88,
+  "cec": 22.12,
+  "texture": "Clay loam"
+ },
+ "qazax": {
+  "phh2o": 7.19,
+  "clay": 34.24,
+  "sand": 21.64,
+  "silt": 44.15,
+  "soc": 20.03,
+  "nitrogen": 1.86,
+  "cec": 23.2,
+  "texture": "Clay loam"
+ },
+ "semkir": {
+  "phh2o": 7.16,
+  "clay": 32.69,
+  "sand": 23.03,
+  "silt": 44.31,
+  "soc": 21.39,
+  "nitrogen": 2.09,
+  "cec": 22.66,
+  "texture": "Clay loam"
+ },
+ "tovuz": {
+  "phh2o": 7.06,
+  "clay": 33.14,
+  "sand": 23.96,
+  "silt": 42.93,
+  "soc": 22.11,
+  "nitrogen": 2.08,
+  "cec": 23.24,
+  "texture": "Clay loam"
+ },
+ "xacmaz": {
+  "phh2o": 7.43,
+  "clay": 37.75,
+  "sand": 14.42,
+  "silt": 47.86,
+  "soc": 23.89,
+  "nitrogen": 2.35,
+  "cec": 24.08,
+  "texture": "Clay loam"
+ },
+ "quba": {
+  "phh2o": 6.66,
+  "clay": 32.46,
+  "sand": 29.64,
+  "silt": 37.95,
+  "soc": 34.99,
+  "nitrogen": 2.97,
+  "cec": 24.23,
+  "texture": "Clay loam"
+ },
+ "qusar": {
+  "phh2o": 6.93,
+  "clay": 34.99,
+  "sand": 25.34,
+  "silt": 39.71,
+  "soc": 31.75,
+  "nitrogen": 2.79,
+  "cec": 25.38,
+  "texture": "Clay loam"
+ },
+ "siyezen": {
+  "phh2o": 7.4,
+  "clay": 36.76,
+  "sand": 17.27,
+  "silt": 46.0,
+  "soc": 22.69,
+  "nitrogen": 2.46,
+  "cec": 24.81,
+  "texture": "Clay loam"
+ },
+ "sabran": {
+  "phh2o": 7.15,
+  "clay": 36.46,
+  "sand": 19.7,
+  "silt": 43.88,
+  "soc": 25.05,
+  "nitrogen": 2.58,
+  "cec": 24.59,
+  "texture": "Clay loam"
+ },
+ "astara": {
+  "phh2o": 6.48,
+  "clay": 36.16,
+  "sand": 22.72,
+  "silt": 41.16,
+  "soc": 30.83,
+  "nitrogen": 2.91,
+  "cec": 23.29,
+  "texture": "Clay loam"
+ },
+ "celilabad": {
+  "phh2o": 7.22,
+  "clay": 38.85,
+  "sand": 14.48,
+  "silt": 46.72,
+  "soc": 21.68,
+  "nitrogen": 2.14,
+  "cec": 24.15,
+  "texture": "Clay loam"
+ },
+ "lerik": {
+  "phh2o": 6.75,
+  "clay": 34.78,
+  "sand": 25.82,
+  "silt": 39.44,
+  "soc": 26.75,
+  "nitrogen": 2.63,
+  "cec": 22.75,
+  "texture": "Clay loam"
+ },
+ "lenkeran": {
+  "phh2o": 6.87,
+  "clay": 37.5,
+  "sand": 18.03,
+  "silt": 44.51,
+  "soc": 32.94,
+  "nitrogen": 2.68,
+  "cec": 24.52,
+  "texture": "Clay loam"
+ },
+ "masalli": {
+  "phh2o": 6.99,
+  "clay": 40.4,
+  "sand": 15.78,
+  "silt": 43.85,
+  "soc": 28.22,
+  "nitrogen": 2.41,
+  "cec": 24.75,
+  "texture": "Silty clay"
+ },
+ "yardimli": {
+  "phh2o": 6.79,
+  "clay": 33.34,
+  "sand": 26.06,
+  "silt": 40.64,
+  "soc": 26.89,
+  "nitrogen": 2.57,
+  "cec": 23.05,
+  "texture": "Clay loam"
+ },
+ "mingecevir-sheher": {
+  "phh2o": 7.62,
+  "clay": 32.95,
+  "sand": 20.76,
+  "silt": 46.32,
+  "soc": 19.39,
+  "nitrogen": 1.88,
+  "cec": 20.73,
+  "texture": "Clay loam"
+ },
+ "agdas": {
+  "phh2o": 7.64,
+  "clay": 36.19,
+  "sand": 17.32,
+  "silt": 46.53,
+  "soc": 16.87,
+  "nitrogen": 1.9,
+  "cec": 21.74,
+  "texture": "Clay loam"
+ },
+ "goycay": {
+  "phh2o": 7.55,
+  "clay": 38.25,
+  "sand": 15.1,
+  "silt": 46.69,
+  "soc": 17.54,
+  "nitrogen": 2.02,
+  "cec": 23.46,
+  "texture": "Clay loam"
+ },
+ "kurdemir": {
+  "phh2o": 7.68,
+  "clay": 38.71,
+  "sand": 12.63,
+  "silt": 48.7,
+  "soc": 20.44,
+  "nitrogen": 2.16,
+  "cec": 25.88,
+  "texture": "Clay loam"
+ },
+ "ucar": {
+  "phh2o": 7.72,
+  "clay": 38.05,
+  "sand": 14.12,
+  "silt": 47.87,
+  "soc": 17.2,
+  "nitrogen": 1.97,
+  "cec": 23.24,
+  "texture": "Clay loam"
+ },
+ "yevlax": {
+  "phh2o": 7.63,
+  "clay": 33.53,
+  "sand": 19.13,
+  "silt": 47.38,
+  "soc": 17.11,
+  "nitrogen": 1.79,
+  "cec": 21.73,
+  "texture": "Clay loam"
+ },
+ "zerdab": {
+  "phh2o": 7.75,
+  "clay": 36.3,
+  "sand": 15.8,
+  "silt": 47.93,
+  "soc": 20.94,
+  "nitrogen": 2.13,
+  "cec": 24.4,
+  "texture": "Clay loam"
+ },
+ "beyleqan": {
+  "phh2o": 7.64,
+  "clay": 36.84,
+  "sand": 14.21,
+  "silt": 48.98,
+  "soc": 17.49,
+  "nitrogen": 1.82,
+  "cec": 23.04,
+  "texture": "Clay loam"
+ },
+ "imisli": {
+  "phh2o": 7.62,
+  "clay": 38.45,
+  "sand": 12.14,
+  "silt": 49.44,
+  "soc": 22.39,
+  "nitrogen": 2.08,
+  "cec": 24.5,
+  "texture": "Clay loam"
+ },
+ "saatli": {
+  "phh2o": 7.65,
+  "clay": 38.16,
+  "sand": 11.81,
+  "silt": 50.07,
+  "soc": 23.28,
+  "nitrogen": 2.22,
+  "cec": 24.42,
+  "texture": "Clay loam"
+ },
+ "sabirabad": {
+  "phh2o": 7.64,
+  "clay": 38.09,
+  "sand": 12.31,
+  "silt": 49.63,
+  "soc": 24.34,
+  "nitrogen": 2.26,
+  "cec": 24.8,
+  "texture": "Clay loam"
+ },
+ "balaken": {
+  "phh2o": 6.45,
+  "clay": 32.41,
+  "sand": 25.52,
+  "silt": 42.1,
+  "soc": 32.23,
+  "nitrogen": 2.82,
+  "cec": 22.13,
+  "texture": "Clay loam"
+ },
+ "qax": {
+  "phh2o": 6.87,
+  "clay": 33.76,
+  "sand": 24.3,
+  "silt": 41.97,
+  "soc": 27.71,
+  "nitrogen": 2.57,
+  "cec": 23.59,
+  "texture": "Clay loam"
+ },
+ "qebele": {
+  "phh2o": 6.68,
+  "clay": 33.23,
+  "sand": 25.18,
+  "silt": 41.63,
+  "soc": 30.69,
+  "nitrogen": 2.65,
+  "cec": 24.26,
+  "texture": "Clay loam"
+ },
+ "oguz": {
+  "phh2o": 6.67,
+  "clay": 32.86,
+  "sand": 25.9,
+  "silt": 41.28,
+  "soc": 31.42,
+  "nitrogen": 2.71,
+  "cec": 23.88,
+  "texture": "Clay loam"
+ },
+ "seki": {
+  "phh2o": 7.0,
+  "clay": 34.21,
+  "sand": 22.53,
+  "silt": 43.3,
+  "soc": 25.4,
+  "nitrogen": 2.41,
+  "cec": 23.89,
+  "texture": "Clay loam"
+ },
+ "zaqatala": {
+  "phh2o": 6.57,
+  "clay": 33.07,
+  "sand": 25.53,
+  "silt": 41.44,
+  "soc": 32.73,
+  "nitrogen": 2.8,
+  "cec": 22.78,
+  "texture": "Clay loam"
+ },
+ "cebrayil": {
+  "phh2o": 7.19,
+  "clay": 35.64,
+  "sand": 20.22,
+  "silt": 44.18,
+  "soc": 17.0,
+  "nitrogen": 1.81,
+  "cec": 23.03,
+  "texture": "Clay loam"
+ },
+ "kelbecer": {
+  "phh2o": 6.56,
+  "clay": 30.07,
+  "sand": 30.79,
+  "silt": 39.18,
+  "soc": 38.49,
+  "nitrogen": 2.95,
+  "cec": 22.45,
+  "texture": "Clay loam"
+ },
+ "qubadli": {
+  "phh2o": 7.08,
+  "clay": 33.91,
+  "sand": 25.41,
+  "silt": 40.72,
+  "soc": 19.99,
+  "nitrogen": 1.99,
+  "cec": 21.99,
+  "texture": "Clay loam"
+ },
+ "lacin": {
+  "phh2o": 6.61,
+  "clay": 31.0,
+  "sand": 29.46,
+  "silt": 39.57,
+  "soc": 35.26,
+  "nitrogen": 2.84,
+  "cec": 22.72,
+  "texture": "Clay loam"
+ },
+ "zengilan": {
+  "phh2o": 7.25,
+  "clay": 33.52,
+  "sand": 24.82,
+  "silt": 41.7,
+  "soc": 17.85,
+  "nitrogen": 1.94,
+  "cec": 21.88,
+  "texture": "Clay loam"
+ },
+ "bilesuvar": {
+  "phh2o": 7.57,
+  "clay": 39.89,
+  "sand": 11.12,
+  "silt": 49.03,
+  "soc": 20.64,
+  "nitrogen": 2.06,
+  "cec": 25.37,
+  "texture": "Clay loam"
+ },
+ "haciqabul": {
+  "phh2o": 7.59,
+  "clay": 37.11,
+  "sand": 15.42,
+  "silt": 47.51,
+  "soc": 21.31,
+  "nitrogen": 1.98,
+  "cec": 25.07,
+  "texture": "Clay loam"
+ },
+ "neftcala": {
+  "phh2o": 7.52,
+  "clay": 38.42,
+  "sand": 14.69,
+  "silt": 46.93,
+  "soc": 26.18,
+  "nitrogen": 2.37,
+  "cec": 26.32,
+  "texture": "Clay loam"
+ },
+ "salyan": {
+  "phh2o": 7.61,
+  "clay": 38.73,
+  "sand": 13.66,
+  "silt": 47.65,
+  "soc": 24.57,
+  "nitrogen": 2.19,
+  "cec": 26.77,
+  "texture": "Clay loam"
+ }
+}

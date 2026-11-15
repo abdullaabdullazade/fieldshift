@@ -1,0 +1,407 @@
+[
+{
+"name": "Kürkənd",
+"name_en": "Kürkənd",
+"lat": 39.400899,
+"lon": 49.2593779,
+"km": 16.1,
+"dist_km": 0.6,
+"place": "village"
+},
+{
+"name": "Neftçala",
+"name_en": "Neftchala",
+"lat": 39.3790532,
+"lon": 49.248607,
+"km": 17.9,
+"dist_km": 2.2,
+"place": "city"
+},
+{
+"name": "Bankə",
+"name_en": "Bankə",
+"lat": 39.4111628,
+"lon": 49.2489189,
+"km": 19.4,
+"dist_km": 0.5,
+"place": "town"
+},
+{
+"name": "Xıllı",
+"name_en": "Xıllı",
+"lat": 39.4245698,
+"lon": 49.1084137,
+"km": 32.8,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Boyat",
+"name_en": "Boyat",
+"lat": 39.4008762,
+"lon": 49.0839184,
+"km": 35.7,
+"dist_km": 3.4,
+"place": "village"
+},
+{
+"name": "Aşağı Qaramanlı",
+"name_en": "Aşağı Qaramanlı",
+"lat": 39.4277822,
+"lon": 49.0395176,
+"km": 39.2,
+"dist_km": 0.8,
+"place": "village"
+},
+{
+"name": "Qədimkənd",
+"name_en": "Qədimkənd",
+"lat": 39.4412487,
+"lon": 49.025626,
+"km": 41.2,
+"dist_km": 0.7,
+"place": "village"
+},
+{
+"name": "Yuxarı Qaramanlı",
+"name_en": "Yuxarı Qaramanlı",
+"lat": 39.4721918,
+"lon": 49.032801,
+"km": 43.7,
+"dist_km": 0.4,
+"place": "village"
+},
+{
+"name": "Surra",
+"name_en": "Surra",
+"lat": 39.4785899,
+"lon": 49.0092611,
+"km": 47.4,
+"dist_km": 0.8,
+"place": "village"
+},
+{
+"name": "Kür Qarabucaq",
+"name_en": "Kür Qarabucaq",
+"lat": 39.4653781,
+"lon": 49.0179883,
+"km": 51.4,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Cəngan Neftçala",
+"name_en": "Cəngan Neftçala",
+"lat": 39.562009,
+"lon": 49.0225425,
+"km": 68.2,
+"dist_km": 0.2,
+"place": "village"
+},
+{
+"name": "Beştalı",
+"name_en": "Beştalı",
+"lat": 39.5670294,
+"lon": 49.0075091,
+"km": 71.4,
+"dist_km": 0.4,
+"place": "village"
+},
+{
+"name": "Arbatan",
+"name_en": "Arbatan",
+"lat": 39.5806721,
+"lon": 48.9518271,
+"km": 75.5,
+"dist_km": 2.7,
+"place": "village"
+},
+{
+"name": "Salyan",
+"name_en": "Salyan",
+"lat": 39.5981012,
+"lon": 48.9844598,
+"km": 80.8,
+"dist_km": 0.3,
+"place": "town"
+},
+{
+"name": "Aşağı Kürkəndi",
+"name_en": "Aşağı Kürkəndi",
+"lat": 39.6193108,
+"lon": 48.9698196,
+"km": 86.6,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Çuxanlı",
+"name_en": "Çuxanlı",
+"lat": 39.6413394,
+"lon": 48.9700588,
+"km": 90.4,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Aşağı Noxudlu",
+"name_en": "Aşağı Noxudlu",
+"lat": 39.6471065,
+"lon": 48.9540849,
+"km": 92.0,
+"dist_km": 0.7,
+"place": "village"
+},
+{
+"name": "Yuxarı Noxudlu",
+"name_en": "Yuxarı Noxudlu",
+"lat": 39.6519543,
+"lon": 48.9356881,
+"km": 93.1,
+"dist_km": 0.4,
+"place": "village"
+},
+{
+"name": "Salmanlı",
+"name_en": "Salmanlı",
+"lat": 39.6878919,
+"lon": 48.9489939,
+"km": 95.9,
+"dist_km": 0.4,
+"place": "village"
+},
+{
+"name": "Çiçəkli",
+"name_en": "Çiçəkli",
+"lat": 39.7103679,
+"lon": 48.9288527,
+"km": 97.7,
+"dist_km": 1.1,
+"place": "village"
+},
+{
+"name": "Parça Xələc",
+"name_en": "Parça Xələc",
+"lat": 39.7154316,
+"lon": 48.9769535,
+"km": 103.8,
+"dist_km": 0.8,
+"place": "village"
+},
+{
+"name": "Muğan Gəncəli",
+"name_en": "Muğan Gəncəli",
+"lat": 39.714194,
+"lon": 48.9536513,
+"km": 105.1,
+"dist_km": 0.3,
+"place": "village"
+},
+{
+"name": "Cəngan",
+"name_en": "Cəngan",
+"lat": 39.7272263,
+"lon": 48.9403565,
+"km": 106.1,
+"dist_km": 0.8,
+"place": "village"
+},
+{
+"name": "Gəncəli",
+"name_en": "Gəncəli",
+"lat": 39.7045864,
+"lon": 48.9556832,
+"km": 112.7,
+"dist_km": 0.4,
+"place": "village"
+},
+{
+"name": "Xankeçən",
+"name_en": "Xankeçən",
+"lat": 39.7565847,
+"lon": 48.916156,
+"km": 115.5,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Çığırğan",
+"name_en": "Çığırğan",
+"lat": 39.7692565,
+"lon": 48.9287256,
+"km": 117.1,
+"dist_km": 0.7,
+"place": "village"
+},
+{
+"name": "Gomuşçu",
+"name_en": "Gomuşçu",
+"lat": 39.7733383,
+"lon": 48.9521316,
+"km": 119.8,
+"dist_km": 0.8,
+"place": "village"
+},
+{
+"name": "Qarabağlı",
+"name_en": "Qarabağlı",
+"lat": 39.7679212,
+"lon": 48.9666751,
+"km": 120.0,
+"dist_km": 2.1,
+"place": "village"
+},
+{
+"name": "Təzəkənd",
+"name_en": "Təzəkənd",
+"lat": 39.7720018,
+"lon": 48.9800372,
+"km": 120.1,
+"dist_km": 2.9,
+"place": "village"
+},
+{
+"name": "Yolüstü",
+"name_en": "Yolüstü",
+"lat": 39.7933862,
+"lon": 48.9754018,
+"km": 120.2,
+"dist_km": 2.6,
+"place": "village"
+},
+{
+"name": "Qaraçala",
+"name_en": "Qaraçala",
+"lat": 39.8102271,
+"lon": 48.9490795,
+"km": 124.1,
+"dist_km": 1.4,
+"place": "village"
+},
+{
+"name": "Çadırlı",
+"name_en": "Çadırlı",
+"lat": 39.8283402,
+"lon": 48.947479,
+"km": 124.5,
+"dist_km": 1.9,
+"place": "village"
+},
+{
+"name": "Azadkənd",
+"name_en": "Azadkənd",
+"lat": 39.814805,
+"lon": 48.9112036,
+"km": 126.0,
+"dist_km": 0.8,
+"place": "village"
+},
+{
+"name": "Pambıqkənd",
+"name_en": "Pambıqkənd",
+"lat": 39.8301662,
+"lon": 48.9148925,
+"km": 127.2,
+"dist_km": 0.6,
+"place": "village"
+},
+{
+"name": "Poladtuğay",
+"name_en": "Poladtuğay",
+"lat": 39.8437258,
+"lon": 48.9005901,
+"km": 129.5,
+"dist_km": 0.9,
+"place": "village"
+},
+{
+"name": "Bəşirbəyli",
+"name_en": "Bəşirbəyli",
+"lat": 39.8536561,
+"lon": 48.94001,
+"km": 130.9,
+"dist_km": 1.6,
+"place": "village"
+},
+{
+"name": "Hacıqəhrəmanlı",
+"name_en": "Hacıqəhrəmanlı",
+"lat": 39.8788363,
+"lon": 48.9244007,
+"km": 133.0,
+"dist_km": 1.0,
+"place": "village"
+},
+{
+"name": "Yaxa Dəllək",
+"name_en": "Yaxa Dəllək",
+"lat": 39.8756384,
+"lon": 48.8822994,
+"km": 134.4,
+"dist_km": 1.7,
+"place": "village"
+},
+{
+"name": "Beşdəli",
+"name_en": "Beşdəli",
+"lat": 39.8871269,
+"lon": 48.8836723,
+"km": 138.9,
+"dist_km": 1.1,
+"place": "village"
+},
+{
+"name": "Qaraağac",
+"name_en": "Qaraağac",
+"lat": 39.9136676,
+"lon": 48.8765305,
+"km": 140.1,
+"dist_km": 1.0,
+"place": "village"
+},
+{
+"name": "Minbaşı",
+"name_en": "Minbaşı",
+"lat": 39.9287914,
+"lon": 48.8971018,
+"km": 146.6,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Bayramlı",
+"name_en": "Bayramlı",
+"lat": 39.9356906,
+"lon": 48.8980743,
+"km": 148.6,
+"dist_km": 0.5,
+"place": "village"
+},
+{
+"name": "Dadaşbəyli",
+"name_en": "Dadaşbəyli",
+"lat": 39.9552041,
+"lon": 48.8739027,
+"km": 153.6,
+"dist_km": 0.6,
+"place": "village"
+},
+{
+"name": "Qaragüney",
+"name_en": "Qaragüney",
+"lat": 39.9538112,
+"lon": 48.8450443,
+"km": 153.6,
+"dist_km": 2.4,
+"place": "village"
+},
+{
+"name": "Osmanlı",
+"name_en": "Osmanlı",
+"lat": 39.9732395,
+"lon": 48.8429832,
+"km": 153.6,
+"dist_km": 2.8,
+"place": "village"
+}
+]

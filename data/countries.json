@@ -1,0 +1,1982 @@
+[
+{
+"iso3": "AFG",
+"name": "Afghanistan",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "near",
+"lat": 33.919,
+"lon": 65.239,
+"units": 34
+},
+{
+"iso3": "AGO",
+"name": "Angola",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": -11.928,
+"lon": 18.879,
+"units": 18
+},
+{
+"iso3": "ALB",
+"name": "Albania",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 41.15,
+"lon": 20.02,
+"units": 12
+},
+{
+"iso3": "AND",
+"name": "Andorra",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 42.543,
+"lon": 1.586,
+"units": 7
+},
+{
+"iso3": "ARE",
+"name": "United Arab Emirates",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 24.349,
+"lon": 55.146,
+"units": 7
+},
+{
+"iso3": "ARG",
+"name": "Argentina",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -37.095,
+"lon": -63.97,
+"units": 23
+},
+{
+"iso3": "ARM",
+"name": "Armenia",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "near",
+"lat": 40.075,
+"lon": 44.834,
+"units": 11
+},
+{
+"iso3": "ATG",
+"name": "Antigua and Barbuda",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 17.085,
+"lon": -61.793,
+"units": 8
+},
+{
+"iso3": "AUS",
+"name": "Australia",
+"continent": "Oceania",
+"subregion": "Australia/New Zealand",
+"group": "world",
+"lat": -24.913,
+"lon": 133.083,
+"units": 9
+},
+{
+"iso3": "AUT",
+"name": "Austria",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 47.697,
+"lon": 14.756,
+"units": 9
+},
+{
+"iso3": "AZE",
+"name": "Azerbaijan",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "home",
+"lat": 40.17,
+"lon": 47.992,
+"units": 2
+},
+{
+"iso3": "BDI",
+"name": "Burundi",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -3.391,
+"lon": 30.007,
+"units": 18
+},
+{
+"iso3": "BEL",
+"name": "Belgium",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 50.509,
+"lon": 4.846,
+"units": 3
+},
+{
+"iso3": "BEN",
+"name": "Benin",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 9.319,
+"lon": 2.296,
+"units": 12
+},
+{
+"iso3": "BFA",
+"name": "Burkina Faso",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 12.24,
+"lon": -1.192,
+"units": 13
+},
+{
+"iso3": "BGD",
+"name": "Bangladesh",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 23.676,
+"lon": 89.89,
+"units": 8
+},
+{
+"iso3": "BGR",
+"name": "Bulgaria",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 42.723,
+"lon": 25.186,
+"units": 28
+},
+{
+"iso3": "BHR",
+"name": "Bahrain",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 26.026,
+"lon": 50.553,
+"units": 4
+},
+{
+"iso3": "BHS",
+"name": "Bahamas",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 24.738,
+"lon": -78.051,
+"units": 32
+},
+{
+"iso3": "BIH",
+"name": "Bosnia and Herzegovina",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 43.914,
+"lon": 17.953,
+"units": 3
+},
+{
+"iso3": "BLR",
+"name": "Belarus",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 53.73,
+"lon": 27.96,
+"units": 7
+},
+{
+"iso3": "BLZ",
+"name": "Belize",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 17.222,
+"lon": -88.727,
+"units": 6
+},
+{
+"iso3": "BOL",
+"name": "Bolivia (Plurinational State of)",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -16.288,
+"lon": -63.943,
+"units": 9
+},
+{
+"iso3": "BRA",
+"name": "Brazil",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -14.281,
+"lon": -49.698,
+"units": 27
+},
+{
+"iso3": "BRB",
+"name": "Barbados",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 13.191,
+"lon": -59.561,
+"units": 11
+},
+{
+"iso3": "BRN",
+"name": "Brunei Darussalam",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 4.518,
+"lon": 114.531,
+"units": 4
+},
+{
+"iso3": "BTN",
+"name": "Bhutan",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 27.508,
+"lon": 90.32,
+"units": 20
+},
+{
+"iso3": "BWA",
+"name": "Botswana",
+"continent": "Africa",
+"subregion": "Southern Africa",
+"group": "world",
+"lat": -22.342,
+"lon": 24.481,
+"units": 10
+},
+{
+"iso3": "CAF",
+"name": "Central African Republic",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": 6.598,
+"lon": 20.645,
+"units": 17
+},
+{
+"iso3": "CAN",
+"name": "Canada",
+"continent": "Northern America",
+"subregion": "Undefined",
+"group": "world",
+"lat": 56.956,
+"lon": -112.398,
+"units": 13
+},
+{
+"iso3": "CHE",
+"name": "Switzerland",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 46.814,
+"lon": 8.446,
+"units": 26
+},
+{
+"iso3": "CHL",
+"name": "Chile",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -35.698,
+"lon": -71.483,
+"units": 16
+},
+{
+"iso3": "CHN",
+"name": "China",
+"continent": "Asia",
+"subregion": "Eastern Asia",
+"group": "world",
+"lat": 36.924,
+"lon": 98.593,
+"units": 34
+},
+{
+"iso3": "CIV",
+"name": "C\u00f4te d'Ivoire",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 7.555,
+"lon": -5.56,
+"units": 14
+},
+{
+"iso3": "CMR",
+"name": "Cameroon",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": 7.361,
+"lon": 13.596,
+"units": 10
+},
+{
+"iso3": "COD",
+"name": "Democratic Republic of the Congo",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": -4.033,
+"lon": 22.332,
+"units": 26
+},
+{
+"iso3": "COG",
+"name": "Congo",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": -0.663,
+"lon": 16.075,
+"units": 12
+},
+{
+"iso3": "COL",
+"name": "Colombia",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": 4.112,
+"lon": -72.62,
+"units": 33
+},
+{
+"iso3": "COM",
+"name": "Comoros",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -12.227,
+"lon": 44.411,
+"units": 3
+},
+{
+"iso3": "CPV",
+"name": "Cabo Verde",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 17.056,
+"lon": -25.172,
+"units": 22
+},
+{
+"iso3": "CRI",
+"name": "Costa Rica",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 9.63,
+"lon": -83.639,
+"units": 7
+},
+{
+"iso3": "CUB",
+"name": "Cuba",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 21.508,
+"lon": -77.804,
+"units": 16
+},
+{
+"iso3": "CYP",
+"name": "Cyprus",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 35.163,
+"lon": 33.397,
+"units": 6
+},
+{
+"iso3": "CZE",
+"name": "Czechia",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 49.804,
+"lon": 15.529,
+"units": 14
+},
+{
+"iso3": "DEU",
+"name": "Germany",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 51.165,
+"lon": 10.579,
+"units": 16
+},
+{
+"iso3": "DJI",
+"name": "Djibouti",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 11.82,
+"lon": 42.496,
+"units": 6
+},
+{
+"iso3": "DMA",
+"name": "Dominica",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 15.423,
+"lon": -61.342,
+"units": 10
+},
+{
+"iso3": "DNK",
+"name": "Denmark",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 55.924,
+"lon": 9.325,
+"units": 5
+},
+{
+"iso3": "DOM",
+"name": "Dominican Republic",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 18.777,
+"lon": -70.125,
+"units": 32
+},
+{
+"iso3": "DZA",
+"name": "Algeria",
+"continent": "Africa",
+"subregion": "Northern Africa",
+"group": "world",
+"lat": 28.143,
+"lon": 0.605,
+"units": 48
+},
+{
+"iso3": "ECU",
+"name": "Ecuador",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -1.791,
+"lon": -78.262,
+"units": 24
+},
+{
+"iso3": "EGY",
+"name": "Egypt",
+"continent": "Africa",
+"subregion": "Northern Africa",
+"group": "world",
+"lat": 26.838,
+"lon": 29.476,
+"units": 27
+},
+{
+"iso3": "ERI",
+"name": "Eritrea",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 15.188,
+"lon": 38.08,
+"units": 6
+},
+{
+"iso3": "ESP",
+"name": "Spain",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 39.896,
+"lon": -3.468,
+"units": 19
+},
+{
+"iso3": "EST",
+"name": "Estonia",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 58.592,
+"lon": 25.375,
+"units": 15
+},
+{
+"iso3": "ETH",
+"name": "Ethiopia",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 9.114,
+"lon": 39.019,
+"units": 11
+},
+{
+"iso3": "FIN",
+"name": "Finland",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 64.952,
+"lon": 27.546,
+"units": 19
+},
+{
+"iso3": "FJI",
+"name": "Fiji",
+"continent": "Oceania",
+"subregion": "Melanesia",
+"group": "world",
+"lat": -17.797,
+"lon": 177.972,
+"units": 4
+},
+{
+"iso3": "FRA",
+"name": "France",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 46.713,
+"lon": 2.183,
+"units": 13
+},
+{
+"iso3": "FSM",
+"name": "Micronesia (Fed. States of)",
+"continent": "Oceania",
+"subregion": "Micronesia",
+"group": "world",
+"lat": 6.887,
+"lon": 158.241,
+"units": 4
+},
+{
+"iso3": "GAB",
+"name": "Gabon",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": -0.818,
+"lon": 11.675,
+"units": 9
+},
+{
+"iso3": "GBR",
+"name": "United Kingdom",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 54.312,
+"lon": -1.916,
+"units": 4
+},
+{
+"iso3": "GEO",
+"name": "Georgia",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "near",
+"lat": 42.318,
+"lon": 43.687,
+"units": 12
+},
+{
+"iso3": "GHA",
+"name": "Ghana",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 7.957,
+"lon": -1.063,
+"units": 16
+},
+{
+"iso3": "GIN",
+"name": "Guinea",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 9.935,
+"lon": -9.66,
+"units": 8
+},
+{
+"iso3": "GMB",
+"name": "Gambia",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 13.383,
+"lon": -15.861,
+"units": 8
+},
+{
+"iso3": "GNB",
+"name": "Guinea-Bissau",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 11.789,
+"lon": -14.676,
+"units": 9
+},
+{
+"iso3": "GNQ",
+"name": "Equatorial Guinea",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": 1.675,
+"lon": 10.483,
+"units": 7
+},
+{
+"iso3": "GRC",
+"name": "Greece",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 39.7,
+"lon": 21.578,
+"units": 8
+},
+{
+"iso3": "GRD",
+"name": "Grenada",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 12.111,
+"lon": -61.687,
+"units": 7
+},
+{
+"iso3": "GRL",
+"name": "Greenland",
+"continent": "Northern America",
+"subregion": "Undefined",
+"group": "world",
+"lat": 71.801,
+"lon": -36.138,
+"units": 6
+},
+{
+"iso3": "GTM",
+"name": "Guatemala",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 15.778,
+"lon": -90.384,
+"units": 22
+},
+{
+"iso3": "GUY",
+"name": "Guyana",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": 4.848,
+"lon": -58.96,
+"units": 10
+},
+{
+"iso3": "HND",
+"name": "Honduras",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 14.5,
+"lon": -87.226,
+"units": 18
+},
+{
+"iso3": "HRV",
+"name": "Croatia",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 44.747,
+"lon": 15.341,
+"units": 21
+},
+{
+"iso3": "HTI",
+"name": "Haiti",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 18.989,
+"lon": -72.295,
+"units": 10
+},
+{
+"iso3": "HUN",
+"name": "Hungary",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 47.171,
+"lon": 19.133,
+"units": 19
+},
+{
+"iso3": "IDN",
+"name": "Indonesia",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 0.115,
+"lon": 113.322,
+"units": 34
+},
+{
+"iso3": "IND",
+"name": "India",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 22.577,
+"lon": 79.548,
+"units": 36
+},
+{
+"iso3": "IRL",
+"name": "Ireland",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 53.415,
+"lon": -7.966,
+"units": 4
+},
+{
+"iso3": "IRN",
+"name": "Iran (Islamic Republic of)",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "near",
+"lat": 32.436,
+"lon": 54.121,
+"units": 32
+},
+{
+"iso3": "IRQ",
+"name": "Iraq",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "near",
+"lat": 33.166,
+"lon": 42.469,
+"units": 18
+},
+{
+"iso3": "ISL",
+"name": "Iceland",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 64.966,
+"lon": -16.318,
+"units": 8
+},
+{
+"iso3": "ISR",
+"name": "Israel",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 31.388,
+"lon": 34.633,
+"units": 6
+},
+{
+"iso3": "ITA",
+"name": "Italy",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 42.51,
+"lon": 12.68,
+"units": 5
+},
+{
+"iso3": "JAM",
+"name": "Jamaica",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 18.116,
+"lon": -77.16,
+"units": 14
+},
+{
+"iso3": "JOR",
+"name": "Jordan",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 31.28,
+"lon": 36.317,
+"units": 12
+},
+{
+"iso3": "JPN",
+"name": "Japan",
+"continent": "Asia",
+"subregion": "Eastern Asia",
+"group": "world",
+"lat": 43.46,
+"lon": 143.331,
+"units": 47
+},
+{
+"iso3": "KAZ",
+"name": "Kazakhstan",
+"continent": "Asia",
+"subregion": "Central Asia",
+"group": "near",
+"lat": 48.025,
+"lon": 66.324,
+"units": 16
+},
+{
+"iso3": "KEN",
+"name": "Kenya",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 0.374,
+"lon": 37.55,
+"units": 47
+},
+{
+"iso3": "KGZ",
+"name": "Kyrgyzstan",
+"continent": "Asia",
+"subregion": "Central Asia",
+"group": "near",
+"lat": 41.22,
+"lon": 74.978,
+"units": 7
+},
+{
+"iso3": "KHM",
+"name": "Cambodia",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 12.547,
+"lon": 105.131,
+"units": 25
+},
+{
+"iso3": "KIR",
+"name": "Kiribati",
+"continent": "Oceania",
+"subregion": "Micronesia",
+"group": "world",
+"lat": 1.871,
+"lon": -157.435,
+"units": 3
+},
+{
+"iso3": "KNA",
+"name": "Saint Kitts and Nevis",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 17.315,
+"lon": -62.745,
+"units": 14
+},
+{
+"iso3": "KOR",
+"name": "Republic of Korea",
+"continent": "Asia",
+"subregion": "Eastern Asia",
+"group": "world",
+"lat": 36.46,
+"lon": 128.011,
+"units": 17
+},
+{
+"iso3": "KWT",
+"name": "Kuwait",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 29.312,
+"lon": 47.424,
+"units": 6
+},
+{
+"iso3": "LAO",
+"name": "Lao People's Democratic Republic",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 18.206,
+"lon": 104.692,
+"units": 18
+},
+{
+"iso3": "LBN",
+"name": "Lebanon",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 33.871,
+"lon": 35.927,
+"units": 9
+},
+{
+"iso3": "LBR",
+"name": "Liberia",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 6.453,
+"lon": -9.633,
+"units": 15
+},
+{
+"iso3": "LBY",
+"name": "Libya",
+"continent": "Africa",
+"subregion": "Northern Africa",
+"group": "world",
+"lat": 26.343,
+"lon": 17.232,
+"units": 22
+},
+{
+"iso3": "LCA",
+"name": "Saint Lucia",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 13.909,
+"lon": -60.977,
+"units": 10
+},
+{
+"iso3": "LIE",
+"name": "Liechtenstein",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 47.161,
+"lon": 9.546,
+"units": 11
+},
+{
+"iso3": "LKA",
+"name": "Sri Lanka",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 7.876,
+"lon": 80.663,
+"units": 9
+},
+{
+"iso3": "LSO",
+"name": "Lesotho",
+"continent": "Africa",
+"subregion": "Southern Africa",
+"group": "world",
+"lat": -29.625,
+"lon": 28.174,
+"units": 10
+},
+{
+"iso3": "LTU",
+"name": "Lithuania",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 55.174,
+"lon": 24.182,
+"units": 10
+},
+{
+"iso3": "LUX",
+"name": "Luxembourg",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 49.815,
+"lon": 6.087,
+"units": 12
+},
+{
+"iso3": "LVA",
+"name": "Latvia",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 56.881,
+"lon": 24.411,
+"units": 43
+},
+{
+"iso3": "MAR",
+"name": "Morocco",
+"continent": "Africa",
+"subregion": "Northern Africa",
+"group": "world",
+"lat": 28.343,
+"lon": -10.064,
+"units": 12
+},
+{
+"iso3": "MCO",
+"name": "Monaco",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 43.739,
+"lon": 7.425,
+"units": 1
+},
+{
+"iso3": "MDA",
+"name": "Republic of Moldova",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 46.981,
+"lon": 28.844,
+"units": 37
+},
+{
+"iso3": "MDG",
+"name": "Madagascar",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -18.781,
+"lon": 46.712,
+"units": 22
+},
+{
+"iso3": "MDV",
+"name": "Maldives",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 5.661,
+"lon": 72.768,
+"units": 21
+},
+{
+"iso3": "MEX",
+"name": "Mexico",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 23.627,
+"lon": -102.273,
+"units": 32
+},
+{
+"iso3": "MHL",
+"name": "Marshall Islands",
+"continent": "Oceania",
+"subregion": "Micronesia",
+"group": "world",
+"lat": 10.347,
+"lon": 169.921,
+"units": 24
+},
+{
+"iso3": "MKD",
+"name": "North Macedonia",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 41.613,
+"lon": 21.75,
+"units": 8
+},
+{
+"iso3": "MLI",
+"name": "Mali",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 17.641,
+"lon": -0.744,
+"units": 9
+},
+{
+"iso3": "MLT",
+"name": "Malta",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 35.902,
+"lon": 14.415,
+"units": 68
+},
+{
+"iso3": "MMR",
+"name": "Myanmar",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 19.26,
+"lon": 95.919,
+"units": 14
+},
+{
+"iso3": "MNE",
+"name": "Montenegro",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 42.7,
+"lon": 19.295,
+"units": 23
+},
+{
+"iso3": "MNG",
+"name": "Mongolia",
+"continent": "Asia",
+"subregion": "Eastern Asia",
+"group": "near",
+"lat": 46.867,
+"lon": 105.426,
+"units": 22
+},
+{
+"iso3": "MOZ",
+"name": "Mozambique",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -18.676,
+"lon": 34.664,
+"units": 10
+},
+{
+"iso3": "MRT",
+"name": "Mauritania",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 21.008,
+"lon": -11.474,
+"units": 13
+},
+{
+"iso3": "MUS",
+"name": "Mauritius",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -20.254,
+"lon": 57.589,
+"units": 12
+},
+{
+"iso3": "MWI",
+"name": "Malawi",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -13.247,
+"lon": 33.662,
+"units": 3
+},
+{
+"iso3": "MYS",
+"name": "Malaysia",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 3.996,
+"lon": 102.087,
+"units": 16
+},
+{
+"iso3": "NAM",
+"name": "Namibia",
+"continent": "Africa",
+"subregion": "Southern Africa",
+"group": "world",
+"lat": -22.957,
+"lon": 17.234,
+"units": 14
+},
+{
+"iso3": "NER",
+"name": "Niger",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 17.738,
+"lon": 9.914,
+"units": 6
+},
+{
+"iso3": "NGA",
+"name": "Nigeria",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 9.072,
+"lon": 7.984,
+"units": 37
+},
+{
+"iso3": "NIC",
+"name": "Nicaragua",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 12.872,
+"lon": -85.578,
+"units": 17
+},
+{
+"iso3": "NIU",
+"name": "Niue",
+"continent": "Oceania",
+"subregion": "Polynesia",
+"group": "world",
+"lat": -19.055,
+"lon": -169.849,
+"units": 14
+},
+{
+"iso3": "NLD",
+"name": "Netherlands",
+"continent": "Europe",
+"subregion": "Western Europe",
+"group": "world",
+"lat": 52.162,
+"lon": 5.608,
+"units": 12
+},
+{
+"iso3": "NOR",
+"name": "Norway",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 64.556,
+"lon": 12.665,
+"units": 11
+},
+{
+"iso3": "NPL",
+"name": "Nepal",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 28.398,
+"lon": 83.093,
+"units": 7
+},
+{
+"iso3": "NRU",
+"name": "Nauru",
+"continent": "Oceania",
+"subregion": "Micronesia",
+"group": "world",
+"lat": -0.529,
+"lon": 166.931,
+"units": 14
+},
+{
+"iso3": "NZL",
+"name": "New Zealand",
+"continent": "Oceania",
+"subregion": "Australia/New Zealand",
+"group": "world",
+"lat": -43.586,
+"lon": 171.2,
+"units": 17
+},
+{
+"iso3": "OMN",
+"name": "Oman",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 20.828,
+"lon": 56.987,
+"units": 7
+},
+{
+"iso3": "PAK",
+"name": "Pakistan",
+"continent": "Asia",
+"subregion": "Southern Asia",
+"group": "world",
+"lat": 30.362,
+"lon": 70.1,
+"units": 7
+},
+{
+"iso3": "PAN",
+"name": "Panama",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 8.418,
+"lon": -81.485,
+"units": 13
+},
+{
+"iso3": "PER",
+"name": "Peru",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -9.186,
+"lon": -75.749,
+"units": 26
+},
+{
+"iso3": "PHL",
+"name": "Philippines",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 7.69,
+"lon": 125.237,
+"units": 17
+},
+{
+"iso3": "PLW",
+"name": "Palau",
+"continent": "Oceania",
+"subregion": "Micronesia",
+"group": "world",
+"lat": 2.899,
+"lon": 131.784,
+"units": 16
+},
+{
+"iso3": "PNG",
+"name": "Papua New Guinea",
+"continent": "Oceania",
+"subregion": "Melanesia",
+"group": "world",
+"lat": -6.652,
+"lon": 144.36,
+"units": 22
+},
+{
+"iso3": "POL",
+"name": "Poland",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 51.919,
+"lon": 19.157,
+"units": 16
+},
+{
+"iso3": "PRK",
+"name": "Dem. People's Republic of Korea",
+"continent": "Asia",
+"subregion": "Eastern Asia",
+"group": "world",
+"lat": 40.341,
+"lon": 126.743,
+"units": 11
+},
+{
+"iso3": "PRT",
+"name": "Portugal",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 39.557,
+"lon": -8.277,
+"units": 20
+},
+{
+"iso3": "PRY",
+"name": "Paraguay",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -23.442,
+"lon": -58.482,
+"units": 18
+},
+{
+"iso3": "PSE",
+"name": "State of Palestine",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 31.947,
+"lon": 35.267,
+"units": 2
+},
+{
+"iso3": "QAT",
+"name": "Qatar",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 25.314,
+"lon": 51.146,
+"units": 8
+},
+{
+"iso3": "ROU",
+"name": "Romania",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 45.94,
+"lon": 24.302,
+"units": 42
+},
+{
+"iso3": "RUS",
+"name": "Russian Federation",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "near",
+"lat": 59.455,
+"lon": 87.258,
+"units": 83
+},
+{
+"iso3": "RWA",
+"name": "Rwanda",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -1.945,
+"lon": 29.957,
+"units": 5
+},
+{
+"iso3": "SAU",
+"name": "Saudi Arabia",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 24.267,
+"lon": 44.62,
+"units": 13
+},
+{
+"iso3": "SDN",
+"name": "Sudan",
+"continent": "Africa",
+"subregion": "Northern Africa",
+"group": "world",
+"lat": 15.904,
+"lon": 30.396,
+"units": 19
+},
+{
+"iso3": "SEN",
+"name": "Senegal",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 14.501,
+"lon": -14.655,
+"units": 14
+},
+{
+"iso3": "SGP",
+"name": "Singapore",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 1.337,
+"lon": 103.829,
+"units": 5
+},
+{
+"iso3": "SLB",
+"name": "Solomon Islands",
+"continent": "Oceania",
+"subregion": "Melanesia",
+"group": "world",
+"lat": -9.589,
+"lon": 160.148,
+"units": 10
+},
+{
+"iso3": "SLE",
+"name": "Sierra Leone",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 8.462,
+"lon": -11.88,
+"units": 4
+},
+{
+"iso3": "SLV",
+"name": "El Salvador",
+"continent": "Latin America and the Caribbean",
+"subregion": "Central America",
+"group": "world",
+"lat": 13.797,
+"lon": -88.912,
+"units": 14
+},
+{
+"iso3": "SMR",
+"name": "San Marino",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 43.947,
+"lon": 12.459,
+"units": 9
+},
+{
+"iso3": "SOM",
+"name": "Somalia",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 5.164,
+"lon": 46.772,
+"units": 18
+},
+{
+"iso3": "SRB",
+"name": "Serbia",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 44.211,
+"lon": 20.36,
+"units": 25
+},
+{
+"iso3": "SSD",
+"name": "South Sudan",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 7.86,
+"lon": 29.119,
+"units": 10
+},
+{
+"iso3": "STP",
+"name": "Sao Tome and Principe",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": 0.216,
+"lon": 6.595,
+"units": 2
+},
+{
+"iso3": "SUR",
+"name": "Suriname",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": 3.921,
+"lon": -56.117,
+"units": 10
+},
+{
+"iso3": "SVK",
+"name": "Slovakia",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 48.671,
+"lon": 19.634,
+"units": 8
+},
+{
+"iso3": "SVN",
+"name": "Slovenia",
+"continent": "Europe",
+"subregion": "Southern Europe",
+"group": "world",
+"lat": 46.126,
+"lon": 14.611,
+"units": 2
+},
+{
+"iso3": "SWE",
+"name": "Sweden",
+"continent": "Europe",
+"subregion": "Northern Europe",
+"group": "world",
+"lat": 62.199,
+"lon": 14.896,
+"units": 21
+},
+{
+"iso3": "SWZ",
+"name": "Eswatini",
+"continent": "Africa",
+"subregion": "Southern Africa",
+"group": "world",
+"lat": -26.497,
+"lon": 31.461,
+"units": 4
+},
+{
+"iso3": "SYC",
+"name": "Seychelles",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -9.378,
+"lon": 46.362,
+"units": 26
+},
+{
+"iso3": "SYR",
+"name": "Syrian Arab Republic",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 34.814,
+"lon": 38.577,
+"units": 14
+},
+{
+"iso3": "TCD",
+"name": "Chad",
+"continent": "Africa",
+"subregion": "Middle Africa",
+"group": "world",
+"lat": 15.466,
+"lon": 18.558,
+"units": 23
+},
+{
+"iso3": "TGO",
+"name": "Togo",
+"continent": "Africa",
+"subregion": "Western Africa",
+"group": "world",
+"lat": 8.67,
+"lon": 1.026,
+"units": 5
+},
+{
+"iso3": "THA",
+"name": "Thailand",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 13.039,
+"lon": 101.7,
+"units": 77
+},
+{
+"iso3": "TJK",
+"name": "Tajikistan",
+"continent": "Asia",
+"subregion": "Central Asia",
+"group": "near",
+"lat": 38.859,
+"lon": 70.951,
+"units": 5
+},
+{
+"iso3": "TKM",
+"name": "Turkmenistan",
+"continent": "Asia",
+"subregion": "Central Asia",
+"group": "near",
+"lat": 38.877,
+"lon": 59.219,
+"units": 5
+},
+{
+"iso3": "TLS",
+"name": "Timor-Leste",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": -8.893,
+"lon": 125.758,
+"units": 13
+},
+{
+"iso3": "TON",
+"name": "Tonga",
+"continent": "Oceania",
+"subregion": "Polynesia",
+"group": "world",
+"lat": -21.168,
+"lon": -175.273,
+"units": 5
+},
+{
+"iso3": "TTO",
+"name": "Trinidad and Tobago",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 10.443,
+"lon": -61.261,
+"units": 14
+},
+{
+"iso3": "TUN",
+"name": "Tunisia",
+"continent": "Africa",
+"subregion": "Northern Africa",
+"group": "world",
+"lat": 33.793,
+"lon": 8.884,
+"units": 24
+},
+{
+"iso3": "TUR",
+"name": "Turkey",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "near",
+"lat": 38.953,
+"lon": 35.499,
+"units": 81
+},
+{
+"iso3": "TUV",
+"name": "Tuvalu",
+"continent": "Oceania",
+"subregion": "Polynesia",
+"group": "world",
+"lat": -6.109,
+"lon": 177.343,
+"units": 8
+},
+{
+"iso3": "TWN",
+"name": "Taiwan",
+"continent": "Asia",
+"subregion": "Eastern Asia",
+"group": "world",
+"lat": 23.598,
+"lon": 120.836,
+"units": 22
+},
+{
+"iso3": "TZA",
+"name": "United Republic of Tanzania",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -6.374,
+"lon": 34.229,
+"units": 30
+},
+{
+"iso3": "UGA",
+"name": "Uganda",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": 1.376,
+"lon": 32.822,
+"units": 4
+},
+{
+"iso3": "UKR",
+"name": "Ukraine",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "near",
+"lat": 48.281,
+"lon": 34.003,
+"units": 27
+},
+{
+"iso3": "URY",
+"name": "Uruguay",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": -32.529,
+"lon": -55.819,
+"units": 19
+},
+{
+"iso3": "USA",
+"name": "United States of America",
+"continent": "Northern America",
+"subregion": "Undefined",
+"group": "world",
+"lat": 37.141,
+"lon": -99.506,
+"units": 56
+},
+{
+"iso3": "UZB",
+"name": "Uzbekistan",
+"continent": "Asia",
+"subregion": "Central Asia",
+"group": "near",
+"lat": 41.384,
+"lon": 63.392,
+"units": 14
+},
+{
+"iso3": "VCT",
+"name": "Saint Vincent and the Grenadines",
+"continent": "Latin America and the Caribbean",
+"subregion": "Caribbean",
+"group": "world",
+"lat": 13.254,
+"lon": -61.195,
+"units": 6
+},
+{
+"iso3": "VEN",
+"name": "Venezuela (Bolivarian Republic of)",
+"continent": "Latin America and the Caribbean",
+"subregion": "South America",
+"group": "world",
+"lat": 6.414,
+"lon": -65.399,
+"units": 25
+},
+{
+"iso3": "VNM",
+"name": "Viet Nam",
+"continent": "Asia",
+"subregion": "South-Eastern Asia",
+"group": "world",
+"lat": 15.983,
+"lon": 107.878,
+"units": 64
+},
+{
+"iso3": "VUT",
+"name": "Vanuatu",
+"continent": "Oceania",
+"subregion": "Melanesia",
+"group": "world",
+"lat": -17.671,
+"lon": 168.365,
+"units": 6
+},
+{
+"iso3": "WSM",
+"name": "Samoa",
+"continent": "Oceania",
+"subregion": "Polynesia",
+"group": "world",
+"lat": -13.622,
+"lon": -172.439,
+"units": 11
+},
+{
+"iso3": "XKX",
+"name": "Kosovo",
+"continent": "Europe",
+"subregion": "Eastern Europe",
+"group": "world",
+"lat": 42.568,
+"lon": 20.915,
+"units": 7
+},
+{
+"iso3": "YEM",
+"name": "Yemen",
+"continent": "Asia",
+"subregion": "Western Asia",
+"group": "world",
+"lat": 15.797,
+"lon": 47.48,
+"units": 22
+},
+{
+"iso3": "ZAF",
+"name": "South Africa",
+"continent": "Africa",
+"subregion": "Southern Africa",
+"group": "world",
+"lat": -28.478,
+"lon": 26.128,
+"units": 9
+},
+{
+"iso3": "ZMB",
+"name": "Zambia",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -13.172,
+"lon": 25.454,
+"units": 10
+},
+{
+"iso3": "ZWE",
+"name": "Zimbabwe",
+"continent": "Africa",
+"subregion": "Eastern Africa",
+"group": "world",
+"lat": -19.012,
+"lon": 29.355,
+"units": 10
+}
+]
