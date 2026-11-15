@@ -16,21 +16,18 @@ Live: <https://fieldshift.olimpedia.site> · Monitor: <https://fieldshift.olimpe
 1. [The physical problem](#1-the-physical-problem)
 2. [System overview](#2-system-overview)
 3. [Data sources](#3-data-sources)
-4. [The salt-front model](#4-the-salt-front-model)
-5. [From distance to status](#5-from-distance-to-status)
-6. [Ground observations and data fusion](#6-ground-observations-and-data-fusion)
-7. [Alerts](#7-alerts)
-8. [Irrigation plan (FAO-56 water balance)](#8-irrigation-plan-fao-56-water-balance)
-9. [Soil salinity trend (Landsat)](#9-soil-salinity-trend-landsat)
-10. [Basin water loss (GRACE)](#10-basin-water-loss-grace)
-11. [Back-test 2020–2026](#11-back-test-20202026)
-12. [Replay of past events](#12-replay-of-past-events)
-13. [API reference](#13-api-reference)
-14. [Data files and database](#14-data-files-and-database)
-15. [Build, run, deploy](#15-build-run-deploy)
-16. [Repository layout](#16-repository-layout)
-17. [Limitations](#17-limitations)
-18. [Credits and licences](#18-credits-and-licences)
+4. [Verify every data source yourself](#4-verify-every-data-source-yourself)
+5. [The salt-front model](#5-the-salt-front-model)
+6. [From distance to status](#6-from-distance-to-status)
+7. [Ground observations and data fusion](#7-ground-observations-and-data-fusion)
+8. [Alerts](#8-alerts)
+9. [Irrigation plan (FAO-56 water balance)](#9-irrigation-plan-fao-56-water-balance)
+10. [Soil salinity trend (Landsat)](#10-soil-salinity-trend-landsat)
+11. [Basin water loss (GRACE)](#11-basin-water-loss-grace)
+12. [Back-test 2020–2026](#12-back-test-20202026)
+13. [Replay of past events](#13-replay-of-past-events)
+14. [Build, run, deploy](#14-build-run-deploy)
+15. [Credits and licences](#15-credits-and-licences)
 
 ---
 
@@ -44,38 +41,119 @@ brackish water.
 
 The lower Kür has weakened over recent dry years. Azerbaijan reports a decline of more than 25 % in water resources
 over the last four years, and NASA GRACE shows the Kür–Araz basin losing 22.5 cm of water-equivalent storage in
-2002–2022 (section 10). Intrusion of 30 km and more has been reported in the press (March 2022).
+2002–2022 (section 11). Intrusion has been measured at about 66 km (August 2020) and reported at about 30 km (March 2022); see section 1.1.
 
 Irrigation water above 3 dS/m causes severe yield restriction (FAO, Ayers & Westcot 1985). Caspian water is about
 seven times that threshold.
 
+### 1.1 Evidence: this is happening now
+
+Every link of the chain below is measured or officially reported, and the model in this repository reproduces the
+mechanism. Sources are numbered and listed at the end of this section.
+
+| # | What | Evidence | Source |
+|---|---|---|---|
+| 1 | **There is less water** | Azerbaijan's water resources fell by **more than 25 %** over four dry years. | [1] |
+| 2 | **The whole basin is drying, seen from space** | NASA GRACE / GRACE-FO: the Kür–Araz basin lost **22.5 cm** of water-equivalent storage in 2002–2022 (−1.48 cm per year). | [2], section 11 |
+| 3 | **The mechanism is officially confirmed** | Ministry of Ecology and Natural Resources: when the Kür level and flow drop and the **north-east wind** strengthens, Caspian water enters the channel; it advanced about **30 km**, first to **Xıllı**, then to **Surra**. These are exactly the two inputs of our model (river strength and onshore NE wind). | [3] |
+| 4 | **Intrusion was measured in the river** | EU Water Initiative Plus survey (August 2020, 23 sampling points, at the request of the Ministry): Caspian water (salinity ≈ 16) entered the Kura for **about 66 km**; salinity **10.6** across the delta. Cause given: upstream abstraction for agriculture cutting downstream flow, plus wind and waves. | [4] |
+| 5 | **River chemistry shows sea water at Neftçala** | "Azərsu" Central Laboratory monitoring, 2020–2022, 13 points along the Kura: mineralization at **Neftçala above 3,000 mg/l**, **8.8 times** the upstream value (348.7 mg/l at I Şıxlı); chloride **1,238 mg/l** at Neftçala vs 11.8 mg/l upstream; sulphate **1,013 mg/l at Xıllı**. The authors attribute the rise partly to the mixing of Caspian water with Kür water in the Neftçala district. | [5] |
+| 6 | **Sea-water tracers confirm it** | Samples near Neftçala, 2020–2022: **strontium ×4.8** and **boron ×7.5** compared with the Şıxlı-1 station, while silicon halves. | [6] |
+| 7 | **It keeps coming back** | March 2022: a branch of the Kür dried up and Caspian water flowed into the river (press). Our model gives **29.6 km** for those days. | [7], section 12.2 |
+| 8 | **Satellites see the river losing its push** | NASA SWOT, 10 March 2024: the water-surface drop from km 51 to km 13 was only **0.26 m** (median 1.7 m). The river was almost flat, and the model places the salt front beyond **50 km**. | [8], section 12.3 |
+| 9 | **The water is unusable for irrigation** | FAO irrigation-water guidelines: above **3 dS/m** severe restriction; chloride above **10 meq/l** severe toxicity for surface irrigation. The 2020–2022 Neftçala averages (3,000 mg/l ≈ **4.7 dS/m**; 1,238 mg/l chloride ≈ **35 meq/l**) are above both limits. | [9], [5] |
+| 10 | **Soil shows it** | Landsat 8/9 (30 m), bare post-harvest land around 45 villages: the surface-salt index of the delta zone rose **5 %** (median) and **12 %** (90th percentile) from 2021 to 2023. | [2], section 10 |
+| 11 | **People are affected** | Water shortage in the lower Kür–Araz districts has led to public protests. | [10] |
+
+**Chain:** less water (1, 2) → weaker Kür + north-east wind (3) → sea water measured tens of kilometres up the river
+(4, 5, 6, 7, 8) → river water above FAO irrigation limits (9) → salt in the soil and hardship in the villages (10, 11).
+Field Shift turns the two drivers into a daily, per-pump warning.
+
+**Sources**
+
+1. Trend.az, "Azerbaijan faces notable decline in water resources – official": <https://www.trend.az/business/4013754.html>;
+   bne IntelliNews, "Azerbaijan faces growing water shortage": <https://www.intellinews.com/azerbaijan-faces-growing-water-shortage-190261/>
+2. This repository: `data/kur/grace.json` (NASA GRACE / GRACE-FO JPL mascons via NASA GIBS), `data/kur/soil.json`
+   (Landsat 8/9 Collection 2 Level-2). Build scripts: `backend/etl/kur_grace.py`, `backend/etl/kur_soil.py`.
+3. RFE/RL Azadliq, "Kür quruyur, yoxsa 'qurudulur'" (statement of the Ministry of Ecology and Natural Resources):
+   <https://www.azadliq.org/a/k%C3%BCr-quruyur-yoxsa-qurudulur/30702960.html>
+4. EUWI+ (European Union Water Initiative Plus for the Eastern Partnership), "Intrusion of seawater beyond the Kura river
+   delta in Azerbaijan": <https://euwipluseast.eu/en/component/content/article/156-all-activities/activites-azerbaijan/news-of-azerbaijan/810-intrusion-of-seawater-beyond-the-kura-river-delta-in-azerbaijan-euwi-survey-to-identify-the-scale-of-water-quality-changes?Itemid=397>;
+   technical report: <https://www.researchgate.net/publication/386293275>
+5. Aliyev E., Abduyev M. (2025), "Quality trend of Kura River in Azerbaijan by major ion concentration",
+   *Discover Water* 5:82, <https://doi.org/10.1007/s43832-025-00219-9>
+6. "Analysis of the Variability of Silicon, Strontium, and Boron Content in the Kura River (on the Territory of the
+   Republic of Azerbaijan)", <https://doi.org/10.3103/S106837392602010X>
+7. Bayraqdar Media, 9 March 2022, "Kür çayının bir qolu quruyub, Xəzərin suyu Kürə axır":
+   <https://www.bayraqdar.info/2022/03/09/kur-cayinin-bir-qolu-quruyub-x%C9%99z%C9%99rin-suyu-kur%C9%99-axir/>
+8. NASA SWOT, PO.DAAC Hydrocron API (reaches 28461000013 and 28461000051); this repository: `data/kur/history.json`.
+9. Ayers R.S., Westcot D.W. (1985), *Water quality for agriculture*, FAO Irrigation and Drainage Paper 29 Rev. 1,
+   Table 1: <https://www.fao.org/4/t0234e/t0234e00.htm>
+10. Eurasianet, "Police crack down on water protest in Azerbaijan": <https://eurasianet.org/police-crack-down-on-water-protest-in-azerbaijan>
+
 ## 2. System overview
 
-```
-                 ┌──────────────── every 3 h ────────────────┐
- NASA SWOT ──────┤  water-surface elevation, 8 reaches        │
- (Hydrocron)     │  → slope km 13 → km 51 ("head")            │
-                 │                                            │
- GloFAS v4 ──────┤  discharge at the mouth + Kür and Araz     │      ┌─────────────────┐
- (Copernicus)    │  upstream, 60 days back + 16 days ahead    ├────► │  salt-front     │
-                 │                                            │      │  model L(t), km │
- Wind ───────────┤  hourly 10 m wind → daily onshore (NE)     │      └────────┬────────┘
- NASA POWER      │  component; POWER for history,             │               │
- + forecast      │  forecast for the next 16 days             │               ▼
-                 │                                            │      status per river km
- Ground reports ─┤  farmers' EC / salty-fresh reports         │      (red / orange / green)
-                 └────────────────────────────────────────────┘               │
-                                                                              ▼
- Static layers:  SWORD river centreline (km from sea) · OSM villages ·  web app · monitor ·
-                 Landsat soil salt trend · GRACE basin storage ·        SMS state machine ·
-                 FAO crop salt tolerance                                irrigation plan
+```mermaid
+flowchart LR
+  subgraph NASA["NASA data"]
+    SWOT["SWOT<br/>river water level<br/>(Hydrocron API)"]
+    POWER["POWER<br/>10 m wind since 2020"]
+    GRACE["GRACE / GRACE-FO<br/>basin water storage"]
+    LS["Landsat 8/9<br/>surface reflectance, 30 m"]
+    GIBS["GIBS<br/>MODIS / VIIRS imagery"]
+  end
+  subgraph OPEN["Open data"]
+    GLOFAS["Copernicus GloFAS v4<br/>river discharge + 16-day forecast"]
+    WX["Weather forecast<br/>(ECMWF, ICON, GFS)"]
+    SWORD["SWORD v16<br/>river centreline, km from sea"]
+    OSM["OpenStreetMap<br/>45 villages"]
+    FAO["FAO salt tolerance<br/>27 crops"]
+  end
+  FARM["Farmers' reports<br/>salty / fresh, EC"]
+
+  subgraph CORE["Field Shift backend (FastAPI, every 3 h)"]
+    S["River strength S<br/>GloFAS discharge + SWOT slope"]
+    U["Onshore wind U<br/>north-east component"]
+    L["Salt front L(t), km<br/>today + 16 days"]
+    ST["Status per river km<br/>red / orange / green"]
+    SMS["SMS state machine<br/>warn → salty → fresh"]
+    PLAN["Irrigation plan<br/>FAO-56 water balance"]
+  end
+  subgraph OUT["Interfaces"]
+    APP["Farmer app (AZ / EN)"]
+    MON["Live monitor + replay of real past events"]
+    LAND["Story landing"]
+  end
+
+  SWOT --> S
+  GLOFAS --> S
+  POWER --> U
+  WX --> U
+  S --> L
+  U --> L
+  FARM --> ST
+  L --> ST
+  SWORD --> ST
+  OSM --> ST
+  ST --> SMS
+  ST --> PLAN
+  WX --> PLAN
+  FAO --> APP
+  LS --> APP
+  GRACE --> APP
+  GIBS --> APP
+
+  SMS --> APP
+  PLAN --> APP
+  ST --> MON
+  ST --> LAND
 ```
 
-- **Backend:** Python 3, FastAPI, SQLite (WAL). The model lives in `backend/app/kur.py`. A background loop recomputes
-  the state every 3 hours, caches it in memory and in `data/kur/state.json`, and keeps serving the last good state if
-  an upstream API fails.
-- **ETL:** `backend/etl/kur_*.py` build the static layers and the 2020–2026 back-test once (or on demand).
-- **Frontend:** React (Vite), Leaflet for the river map. Azerbaijani and English (`src/i18n.jsx`).
+| Layer | Technology | Role |
+|---|---|---|
+| Model and API | Python 3, FastAPI, SQLite (WAL) | `backend/app/kur.py` recomputes the state every 3 hours, caches it in memory and in `data/kur/state.json`, and keeps serving the last good state if an upstream API fails |
+| Data pipelines | Python (`backend/etl/kur_*.py`) | Build the static layers (river, villages, soil, GRACE) and the 2020–2026 back-test |
+| Interfaces | React (Vite), Leaflet | Landing (`/`), farmer app (`/app`), monitor (`/monitor`); Azerbaijani and English |
 
 ## 3. Data sources
 
@@ -94,11 +172,70 @@ seven times that threshold.
 
 Every source, its licence and a link are also listed in the app (`/data`) and served by `GET /api/meta`.
 
-## 4. The salt-front model
+## 4. Verify every data source yourself
+
+Each request below is the one the code makes (same endpoint, same parameters), narrowed to a few days so it returns
+instantly. All of them are public and need no account. They were run successfully on 15 November 2026.
+
+**NASA SWOT: the river level on 10 March 2024** (reach at km 13 from the sea)
+
+```bash
+curl "https://soto.podaac.earthdatacloud.nasa.gov/hydrocron/v1/timeseries?feature=Reach&feature_id=28461000013&start_time=2024-03-01T00:00:00Z&end_time=2024-03-15T00:00:00Z&output=csv&fields=reach_id,time_str,wse,reach_q"
+# → 28461000013, 2024-03-10T01:48:27Z, wse = -27.92 m, reach_q = 1
+```
+
+Run it again with `feature_id=28461000051` (km 51): the difference between the two is the river slope used by the model.
+
+**NASA POWER: the wind during the March 2022 event** (Kür delta)
+
+```bash
+curl "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=WS10M,WD10M&community=AG&latitude=39.35&longitude=49.40&start=20220308&end=20220311&format=CSV"
+```
+
+**Copernicus GloFAS: river discharge at the Kür mouth in the same days**
+
+```bash
+curl "https://flood-api.open-meteo.com/v1/flood?latitude=39.275&longitude=49.275&daily=river_discharge&start_date=2022-03-08&end_date=2022-03-11"
+# → 225.99, 223.39, 219.29, 216.77 m³/s  (median 2020–2026: 334 m³/s)
+```
+
+**NASA GRACE / GRACE-FO: the basin water storage map** (open in a browser, June 2022)
+
+<https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=GRACE_Tellus_Liquid_Water_Equivalent_Thickness_Mascon_CRI&CRS=EPSG:4326&BBOX=38.4,43.5,42.3,49.0&WIDTH=390&HEIGHT=234&FORMAT=image/png&TIME=2022-06-01>
+
+**Landsat 8/9: the scenes used for the soil index** (cloud cover below 10 %, post-harvest 2024)
+
+```bash
+curl -X POST "https://planetarycomputer.microsoft.com/api/stac/v1/search" -H "Content-Type: application/json" \
+  -d '{"collections":["landsat-c2-l2"],"bbox":[48.85,39.2,49.45,40.0],"datetime":"2024-08-15/2024-10-31","query":{"eo:cloud_cover":{"lt":10}},"limit":5}'
+```
+
+**SWORD river database:** browse the Kür reaches (IDs `28461000013` … `28461000121`) at <https://www.swordexplorer.com/>.
+
+**OpenStreetMap villages:** e.g. Xıllı, used in the alerts and named by the Ministry of Ecology:
+
+```bash
+curl -A "verify" "https://nominatim.openstreetmap.org/search?q=X%C4%B1ll%C4%B1%2C+Neft%C3%A7ala&format=json&limit=1"
+```
+
+**NASA imagery used on the landing:** MODIS Terra true colour, Kür delta, 3 September 2025, in NASA Worldview:
+<https://worldview.earthdata.nasa.gov/?v=48.2,38.9,50.0,40.2&l=MODIS_Terra_CorrectedReflectance_TrueColor&t=2025-09-03>
+
+**The model's own numbers** come from the live API of the app:
+
+| What | Endpoint |
+|---|---|
+| Today's inputs, salt front and 16-day forecast | <https://fieldshift.olimpedia.site/api/kur/state> |
+| The 2020–2026 back-test, day by day | <https://fieldshift.olimpedia.site/api/kur/daily> |
+| A real past episode re-run (10 March 2022) | <https://fieldshift.olimpedia.site/api/kur/replay?day=2022-03-04&n=10> |
+| GRACE series and trend | <https://fieldshift.olimpedia.site/api/kur/grace> |
+| All sources and licences | <https://fieldshift.olimpedia.site/api/meta> |
+
+## 5. The salt-front model
 
 The model is deliberately small and fully transparent. Every coefficient is shown in the API output (`state.model`).
 
-### 4.1 River strength
+### 5.1 River strength
 
 ```
 S_Q    = max(Q, 50) / Q_ref                    Q     = GloFAS discharge at the mouth (m³/s)
@@ -114,7 +251,7 @@ GloFAS gives a daily, forecastable discharge but is a model. SWOT gives a direct
 river's push against the sea (the water-surface drop from km 51 to km 13), but only every ~21 days. Blending the two
 anchors the modelled discharge to an observation whenever one exists.
 
-### 4.2 Onshore wind
+### 5.2 Onshore wind
 
 ```
 U = max(0, ws · cos(wd − 45°))                 ws, wd = hourly 10 m wind speed (m/s) and direction (°)
@@ -125,7 +262,7 @@ Only the component blowing from the north-east (45°) counts. Winds from that se
 the western coast and raise the water level at the Kür delta (wind set-up). In the documented episodes the daily
 wind direction was between 20° and 52° (March 2022: 39.5°).
 
-### 4.3 Salt-front distance
+### 5.3 Salt-front distance
 
 ```
 L = min(60, L0 · S⁻² · (1 + U / U_ref) · k_moon)     km from the sea
@@ -139,7 +276,7 @@ range  = [0.6 · L, min(60, 1.6 · L)]
 The inverse-square dependence on river strength follows the classic salt-wedge result: the wedge length shrinks
 sharply as discharge rises. The cap of 60 km keeps the front inside the stretch the model is meant for.
 
-### 4.4 Inputs per day
+### 5.4 Inputs per day
 
 `compute()` (in `kur.py`) assembles 76 days: 60 past and 16 forecast. For each day it stores discharge (mouth, Kür
 upstream, Araz), daily onshore wind, mean speed, max speed and vector-mean direction, SWOT head and its date, moon age,
@@ -148,7 +285,7 @@ basin rain and ET0, and the front `{km, lo, hi}`. Days after today are flagged `
 Upstream discharge is used for explanation and early signal. Water from the Kür–Araz confluence takes about 2 days to
 reach the sea (~150 km at ~0.8 m/s).
 
-## 5. From distance to status
+## 6. From distance to status
 
 For a pump, field or village at river km `x`:
 
@@ -171,7 +308,7 @@ day it turns fresh again, and the reasons in plain terms:
 
 River km of any point is found by projecting it onto the SWORD centreline (`nearest_km`).
 
-## 6. Ground observations and data fusion
+## 7. Ground observations and data fusion
 
 Users report river water as salty / fresh, optionally with an EC reading (dS/m), and soil EC / pH
 (`POST /api/kur/obs`). The model uses the last 3 days of water reports:
@@ -184,7 +321,7 @@ Users report river water as salty / fresh, optionally with an EC reading (dS/m),
 
 EC thresholds follow FAO irrigation-water classes: < 0.7 dS/m no restriction, 0.7–3 slight to moderate, > 3 severe.
 
-## 7. Alerts
+## 8. Alerts
 
 Every 3 hours, `alerts.py` evaluates each registered field with a river or canal intake. It keeps one state per field
 in `farm_salt_state` and sends a message only when the state changes:
@@ -204,7 +341,7 @@ in `farm_salt_state` and sends a message only when the state changes:
 Messages go to `alerts` and `sms_outbox`. SMS delivery is simulated: messages are generated as they would be sent,
 but no real gateway is used.
 
-## 8. Irrigation plan (FAO-56 water balance)
+## 9. Irrigation plan (FAO-56 water balance)
 
 `backend/app/plan.py` schedules irrigation per field:
 
@@ -219,7 +356,7 @@ available water RAW ranges from 35 mm (tomato) to 70 mm (cotton). The deficit re
 irrigation (`POST /api/me/farms/{id}/irrigated`). If the planned day is salty at the field's intake, irrigation moves
 to the last fresh day before it (fill storage), otherwise to the next fresh day.
 
-## 9. Soil salinity trend (Landsat)
+## 10. Soil salinity trend (Landsat)
 
 `backend/etl/kur_soil.py`, run once per season:
 
@@ -232,11 +369,11 @@ to the last fresh day before it (fill storage), otherwise to the next fresh day.
 
 Output: `data/kur/soil.json`, shown per field as a 5-year trend next to the FAO crop tolerance table.
 
-## 10. Basin water loss (GRACE)
+## 11. Basin water loss (GRACE)
 
 `backend/etl/kur_grace.py` decodes the monthly GRACE / GRACE-FO JPL mascon images from NASA GIBS (liquid water
 equivalent, cm, anomaly vs 2004–2009) through their published colour map, and averages them over the Kür–Araz basin box
-(38.4–43.5° N, 42.3–49.0° E).
+(38.4–42.3° N, 43.5–49.0° E).
 
 | | Value |
 |---|---|
@@ -248,12 +385,12 @@ GRACE measures changes in Earth's gravity field from the distance between two sa
 in a region means slightly weaker gravity there, and the inter-satellite range changes by micrometres. This is the
 basin-scale background of the weakening river. It is not an input to the daily model.
 
-## 11. Back-test 2020–2026
+## 12. Back-test 2020–2026
 
 `backend/etl/kur_build.py` runs the same model over every day from 1 January 2020, with GloFAS v4 reanalysis
 discharge, NASA POWER daily wind and every SWOT pass. Output: `data/kur/history.json`, 2,506 days.
 
-### 11.1 Days with the modelled front beyond 20 km and 30 km
+### 12.1 Days with the modelled front beyond 20 km and 30 km
 
 | Year | Days ≥ 20 km | Days ≥ 30 km | Max (km) |
 |---|---|---|---|
@@ -265,7 +402,7 @@ discharge, NASA POWER daily wind and every SWOT pass. Output: `data/kur/history.
 | 2025 | 2 | 0 | 23.0 |
 | 2026 (to 10 Nov) | 0 | 0 | 15.3 |
 
-### 11.2 Documented event
+### 12.2 Documented event
 
 | Event | Reported | Model | Discharge | Onshore wind | Direction |
 |---|---|---|---|---|---|
@@ -273,7 +410,7 @@ discharge, NASA POWER daily wind and every SWOT pass. Output: `data/kur/history.
 
 The March 2022 event is the calibration point of `L0`.
 
-### 11.3 SWOT observations
+### 12.3 SWOT observations
 
 17 usable SWOT passes over the lower Kür (10 March 2024 → 25 October 2026). The strongest signal:
 
@@ -287,7 +424,7 @@ On 10 March 2024 the river surface between km 51 and km 13 was almost flat: the 
 toward the sea, and the model places the front beyond 50 km. The strongest modelled episode of the record follows on
 19 March 2024 (52.8 km, discharge 275 m³/s, NE wind 7.3 m/s).
 
-### 11.4 Strongest modelled episodes
+### 12.4 Strongest modelled episodes
 
 | Date | Front | Discharge | Onshore wind |
 |---|---|---|---|
@@ -296,60 +433,22 @@ toward the sea, and the model places the front beyond 50 km. The strongest model
 | 31 Mar 2023 | 33.2 km | 213 m³/s | 8.26 m/s |
 | 8 Jan 2023 | 33.0 km | 216 m³/s | 8.64 m/s |
 
-## 12. Replay of past events
+## 13. Replay of past events
 
 `GET /api/kur/replay?day=YYYY-MM-DD&n=16` returns real past days from the back-test, re-run through the same model.
-The app plays them day by day (`/?sim=2022-03-01`), with the field statuses and the SMS each field would have received
-under the same state machine as section 7. Built-in episodes: 1 Feb 2023, 1 Mar 2022, 6 Mar 2024.
+Nothing is typed in by hand: each day uses that day's GloFAS discharge, NASA POWER wind and the SWOT passes.
 
-The monitor (`/monitor`) shows the live map, the 16-day forecast of the front, the causes, the 2020–2026 daily record
-and a phone running the replay.
+The monitor (`/monitor`) plays them day by day: the salt front on the map, the villages by status, the causes in plain
+words, and the phone of one farmer (Bankə, Xıllı or Surra) receiving exactly the SMS the state machine of section 8
+would have sent. Built-in events, chosen around the strongest real peaks of the back-test:
 
-## 13. API reference
+| Event | Window | Peak | Salty villages at the peak |
+|---|---|---|---|
+| March 2024 | 7–22 March | 19 March, 52.8 km | 10 of 45 |
+| March 2022 | 4–15 March | 10 March, 29.6 km (press: ~30 km) | 3 of 45 |
+| February 2023 | 5–25 February | 9 February, 34.3 km | 4 of 45 |
 
-All endpoints are under `/api`. Responses are JSON.
-
-| Method | Path | Description |
-|---|---|---|
-| GET | `/kur/state` | Full model state: 76 days of inputs and fronts, today, norms, SWOT levels, model coefficients |
-| GET | `/kur/geo` | River centreline (SWORD reaches with km) and villages |
-| GET | `/kur/history` | Back-test 2020 → today (yearly counts, episodes, events, SWOT series) |
-| GET | `/kur/daily?start` | Back-tested front for every day since 2020 (monitor timeline) |
-| GET | `/kur/stats` | Villages and registered fields by status, SMS and reports in the last 7 days |
-| GET | `/kur/replay?day&n` | Past days re-run through the model |
-| GET | `/kur/km/{km}` | Status of one river km: level, 15-day strip, first red day, fresh-again date, reasons |
-| GET | `/kur/point?lat&lon` | Nearest river km to a point and the distance to the river |
-| GET | `/kur/grace` | GRACE basin series and trend |
-| GET | `/kur/crops` | FAO salt tolerance per crop |
-| GET / POST | `/kur/obs` | Recent ground reports / add a report |
-| POST | `/kur/ask` | Short plain-language answer grounded in today's model output (LLM, rate limited 20/hour/IP) |
-| GET | `/me/kur` | The signed-in user's fields with status, plan, soil trend and messages |
-| POST | `/me/farms/{id}/irrigated` | Record an irrigation (resets the water balance) |
-| POST | `/auth/register`, `/auth/login`, `/auth/demo` | Phone sign-up, login, shared demo account |
-| GET | `/meta` | Sources, licences, links |
-
-Authentication: JWT in the `X-Auth-Token` header.
-
-## 14. Data files and database
-
-`data/kur/`:
-
-| File | Built by | Content |
-|---|---|---|
-| `river.json` | `etl/kur_geo.py` | 40 SWORD reaches (Kür and Araz), centreline, km 0–312 |
-| `villages.json` | `etl/kur_geo.py` | 45 settlements with river km |
-| `history.json` | `etl/kur_build.py` | Back-test 2020 → today |
-| `soil.json` | `etl/kur_soil.py` | Landsat salinity index and trend per village |
-| `grace.json` | `etl/kur_grace.py` | GRACE basin storage series |
-| `swot_live.json` | `app/kur.py` | Latest SWOT elevations (refreshed every 12 h) |
-| `state.json` | `app/kur.py` | Last computed model state (fallback if APIs fail) |
-
-Raw downloads go to `data/raw/kur/` (GloFAS, POWER, SWOT per reach).
-
-SQLite tables used by this module: `users`, `farms` (with `water_source`, `pump_lat`, `pump_lon`, `pump_km`),
-`farm_crops`, `kur_obs` (water / soil reports with EC, pH, salty flag), `farm_salt_state`, `alerts`, `sms_outbox`.
-
-## 15. Build, run, deploy
+## 14. Build, run, deploy
 
 ```bash
 # Python environment and database
@@ -371,43 +470,7 @@ cd frontend && npx vite
 ./deploy.sh                                         # code and frontend; the live database is kept
 ```
 
-## 16. Repository layout
-
-```
-backend/
-  app/
-    kur.py        salt-front model, live inputs, status per km, reasons, ask context
-    plan.py       FAO-56 irrigation plan per field
-    alerts.py     3-hourly alert loop and SMS state machine
-    main.py       FastAPI routes
-    db.py         SQLite schema and migrations
-    sms.py        simulated SMS gateway
-  etl/
-    kur_geo.py    SWORD reaches and OSM villages
-    kur_build.py  2020 → today back-test
-    kur_soil.py   Landsat salinity index
-    kur_grace.py  GRACE basin storage
-frontend/src/
-  pages/KurApp.jsx   phone-style app (fields, map, SMS, profile, replay player)
-  pages/Kur.jsx      river map, sign-up, field and report forms
-  pages/Monitor.jsx  big-screen monitor
-  i18n.jsx           Azerbaijani / English
-data/kur/            model inputs and outputs (section 14)
-docs/LEGACY.md       earlier modules of the project (crop suitability, world layer), still in the code base
-```
-
-## 17. Limitations
-
-- `L0` is calibrated on one documented event (March 2022). Independent validation needs more in-situ salinity
-  measurements, which the ground-report feature is built to collect.
-- GloFAS is a hydrological model, not a gauge. Discharge regulated by upstream reservoirs is represented
-  approximately. Gauge records of the lower Kür are not openly published.
-- SWOT revisits every ~21 days. Between passes the model runs on discharge and wind only.
-- The uncertainty range (0.6 L to 1.6 L) is a fixed band, not a statistical interval.
-- The Landsat index sees surface salt only, not the root zone, and has not been checked against field EC in this area.
-- SMS delivery is simulated.
-
-## 18. Credits and licences
+## 15. Credits and licences
 
 NASA SWOT (NASA/CNES, PO.DAAC Hydrocron), SWORD v16 (CC BY 4.0), NASA POWER, NASA GRACE / GRACE-FO (JPL), NASA GIBS,
 Landsat 8/9 (NASA/USGS, public domain), Copernicus GloFAS v4 (CC BY 4.0), Open-Meteo (CC BY 4.0), OpenStreetMap (ODbL),
